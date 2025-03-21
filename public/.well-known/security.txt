@@ -2,5 +2,5 @@
 Contact: mailto:security@philippinescasinos.com
 Expires: 2026-03-21T14:32:39+08:00
 Preferred-Languages: en, tl
-Canonical: https://www.philippinescasinos.com/.well-known/security.txt
-Policy: https://www.philippinescasinos.com/security-policy
+Canonical: https://epochph.pro/.well-known/security.txt
+Policy: https://epochph.pro/security-policy
