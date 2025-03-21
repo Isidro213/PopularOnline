@@ -1,0 +1,12 @@
+/* TEAM */
+    Creator: Mrn Rianbow
+    Contact: mrn@philippinescasinos.com
+    Twitter: @MrnRianbow
+    Location: Philippines
+
+/* SITE */
+    Last update: 2025-03-21
+    Standards: HTML5, CSS3, JavaScript
+    Components: Next.js, Tailwind CSS
+    Software: Visual Studio Code, Adobe Photoshop, Figma
+    Language: English, Filipino, Cebuano

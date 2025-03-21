@@ -1,0 +1,24 @@
+{
+  "name": "Philippines Casinos",
+  "short_name": "PH Casinos",
+  "description": "Best online casinos in the Philippines with GCash, PayMaya & free demo slots",
+  "icons": [
+    {
+      "src": "/images/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/images/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "theme_color": "#111827",
+  "background_color": "#000000",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait"
+}
