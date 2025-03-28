@@ -1717,52 +1717,7 @@
     background-color: var(--color-blue-500);
     transform: translateY(-2px);
   }
-  
-  /* Fixed Sidebar for Desktop */
-  .fixed-sidebar {
-    display: none;
-    position: fixed;
-    top: 50%;
-    right: 0;
-    transform: translateY(-50%);
-    background-color: var(--color-gray-900);
-    border: 1px solid var(--color-gray-800);
-    border-right: none;
-    border-radius: 0.5rem 0 0 0.5rem;
-    padding: 1.5rem;
-    width: 300px;
-    z-index: 100;
-    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease;
-  }
-  
-  .fixed-sidebar.collapsed {
-    transform: translateY(-50%) translateX(290px);
-  }
-  
-  .fixed-sidebar-toggle {
-    position: absolute;
-    left: -40px;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: var(--color-gray-900);
-    border: 1px solid var(--color-gray-800);
-    border-right: none;
-    border-radius: 0.5rem 0 0 0.5rem;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    color: var(--color-white);
-  }
-  
-  @media (min-width: 1024px) {
-    .fixed-sidebar {
-      display: block;
-    }
-  }
+ 
   
   /* CTA Banner */
   .cta-banner {
@@ -2174,47 +2129,6 @@
       </div>
     </div>
   </header>
-
-  <!-- Sidebar for Desktop -->
-  <div id="fixed-sidebar" class="fixed-sidebar collapsed">
-    <div id="sidebar-toggle" class="fixed-sidebar-toggle">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <polyline points="15 18 9 12 15 6"></polyline>
-      </svg>
-    </div>
-    
-    <h3 class="sidebar-title">Quick Links</h3>
-    <ul class="toc">
-      <li><a href="#top-casinos">Top GCash Casinos</a></li>
-      <li><a href="#popular-slots">Free Demo Slots</a></li>
-      <li><a href="#top-casinos">Best Casino Bonuses</a></li>
-    </ul>
-    
-    <div class="help-box">
-      <h3>Need Help?</h3>
-      <p>Questions about online casinos?</p>
-      <a href="https://t.me/+4NOllNOsaCJlODA1" class="contact-button">Telegram Support</a>
-    </div>
-    
-    <div class="mt-4">
-      <h3 class="sidebar-title">Top Bonuses</h3>
-      <ul class="toc">
-        <li class="flex justify-between">
-          <a href="/go/mcw-casino" class="text-white">MCW Casino</a>
-          <span class="text-amber-500">₱38888</span>
-        </li>
-        <li class="flex justify-between">
-          <a href="/go/22fun" class="text-white">22Fun</a>
-          <span class="text-amber-500">₱25000</span>
-        </li>
-      </ul>
-    </div>
-    
-    <div class="mt-4">
-      <h3 class="sidebar-title">Trust Our Rankings</h3>
-      <p class="text-sm text-gray-300">Our team of Filipino gambling experts has over 10 years of experience testing online casinos. We deposit real money, play games, and withdraw winnings to ensure each casino delivers a safe and enjoyable experience for Filipino players.</p>
-    </div>
-  </div>
 
   <!-- Main Content Area -->
   <main id="main-content">
@@ -2891,28 +2805,6 @@
         }
       });
       
-      // Sidebar toggle functionality
-      const fixedSidebar = document.getElementById('fixed-sidebar');
-      const sidebarToggle = document.getElementById('sidebar-toggle');
-      
-      sidebarToggle.addEventListener('click', function() {
-        fixedSidebar.classList.toggle('collapsed');
-        
-        // Change the icon direction when sidebar is toggled
-        if (fixedSidebar.classList.contains('collapsed')) {
-          sidebarToggle.innerHTML = `
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <polyline points="15 18 9 12 15 6"></polyline>
-            </svg>
-          `;
-        } else {
-          sidebarToggle.innerHTML = `
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <polyline points="9 18 15 12 9 6"></polyline>
-            </svg>
-          `;
-        }
-      });
       
       // FAQ toggle functionality
       const faqQuestions = document.querySelectorAll('.faq-question');
