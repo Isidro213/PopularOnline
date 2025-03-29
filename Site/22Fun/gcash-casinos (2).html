@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en-PH">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All GCash Casinos Philippines | Best Online Casinos with GCash</title>
+    <meta name="description" content="Complete list of online casinos accepting GCash in the Philippines. Compare bonuses, withdrawal times, and features of the best GCash casinos.">
+    <style>
+        :root {
+            --color-black: #000000;
+            --color-white: #ffffff;
+            --color-gray-800: #1f2937;
+            --color-gray-900: #111827;
+            --color-gray-950: #0a0f1a;
+            --color-gray-300: #d1d5db;
+            --color-gray-400: #9ca3af;
+            --color-amber-500: #f59e0b;
+            --color-blue-400: #60a5fa;
+            --color-green-500: #10b981;
+            --color-orange-500: #f97316;
+            --color-orange-600: #ea580c;
+            --color-red-600: #dc2626;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+            background-color: var(--color-black);
+            color: var(--color-white);
+            line-height: 1.5;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            color: var(--color-blue-400);
+            margin-bottom: 1.5rem;
+            font-weight: 500;
+            transition: color 0.2s;
+            text-decoration: none;
+        }
+
+        .back-button:hover {
+            color: var(--color-white);
+        }
+
+        .back-button svg {
+            margin-right: 0.5rem;
+        }
+
+        .page-title {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .page-description {
+            color: var(--color-gray-300);
+            margin-bottom: 2rem;
+        }
+
+        .casino-card {
+            display: flex;
+            flex-direction: column;
+            background-color: var(--color-gray-950);
+            border: 1px solid var(--color-gray-800);
+            border-radius: 0.5rem;
+            padding: 1rem;
+            margin-bottom: 1.5rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+        }
+
+        .casino-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+        }
+
+        @media (min-width: 768px) {
+            .casino-card {
+                flex-direction: row;
+                align-items: center;
+            }
+        }
+
+        .casino-rank {
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            background-color: var(--color-orange-500);
+            color: var(--color-white);
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            z-index: 1;
+        }
+
+        .casino-logo {
+            max-width: 150px;
+            height: 150px;
+            object-fit: contain;
+            border-radius: 0.5rem;
+            border: 2px solid gold;
+            transition: transform 0.3s;
+        }
+
+        .casino-card:hover .casino-logo {
+            transform: scale(1.05);
+        }
+
+        .casino-details {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+            width: 100%;
+            margin-top: 1rem;
+        }
+
+        @media (min-width: 640px) {
+            .casino-details {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 768px) {
+            .casino-details {
+                grid-template-columns: repeat(4, 1fr);
+                margin-top: 0;
+                margin-left: 1rem;
+            }
+        }
+
+        .casino-rating {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .rating-value {
+            display: flex;
+            align-items: center;
+        }
+
+        .rating-value span {
+            font-size: 0.875rem;
+            color: var(--color-gray-400);
+            margin-left: 0.25rem;
+        }
+
+        .stars {
+            color: var(--color-amber-500);
+        }
+
+        .casino-bonus {
+            color: var(--color-amber-500);
+            font-weight: bold;
+        }
+
+        .casino-terms {
+            font-size: 0.75rem;
+            color: var(--color-gray-400);
+        }
+
+        .features-list {
+            list-style: none;
+        }
+
+        .features-list li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.5rem;
+            font-size: 0.875rem;
+        }
+
+        .features-list li::before {
+            content: "✓";
+            color: var(--color-green-500);
+            margin-right: 0.5rem;
+        }
+
+        .casino-actions {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .play-button {
+            display: block;
+            width: 100%;
+            background-color: var(--color-orange-500);
+            color: var(--color-white);
+            border: none;
+            border-radius: 0.25rem;
+            padding: 0.75rem 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            text-align: center;
+            transition: background-color 0.2s, transform 0.2s;
+            position: relative;
+            overflow: hidden;
+            text-decoration: none;
+        }
+
+        .play-button::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.7s;
+        }
+
+        .play-button:hover {
+            background-color: var(--color-orange-600);
+            transform: translateY(-2px);
+        }
+
+        .play-button:hover::before {
+            left: 100%;
+        }
+
+        .read-review {
+            color: var(--color-blue-400);
+            font-size: 0.875rem;
+            text-align: center;
+            transition: color 0.2s;
+            text-decoration: none;
+        }
+
+        .read-review:hover {
+            text-decoration: underline;
+            color: var(--color-white);
+        }
+
+        .payment-methods {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .payment-method {
+            background-color: var(--color-gray-900);
+            border-radius: 0.5rem;
+            padding: 0.5rem;
+            width: 80px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid var(--color-gray-800);
+        }
+
+        .payment-method img {
+            max-width: 80%;
+            max-height: 80%;
+            object-fit: contain;
+        }
+
+        .gcash-info {
+            background-color: var(--color-gray-900);
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border: 1px solid var(--color-gray-800);
+        }
+
+        .gcash-info h2 {
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .gcash-info p {
+            color: var(--color-gray-300);
+            margin-bottom: 1rem;
+        }
+
+        .gcash-info ul {
+            list-style: none;
+            margin-bottom: 1rem;
+        }
+
+        .gcash-info ul li {
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .gcash-info ul li::before {
+            content: "✓";
+            color: var(--color-green-500);
+            margin-right: 0.5rem;
+            flex-shrink: 0;
+        }
+
+        .filter-options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .filter-button {
+            background-color: var(--color-gray-900);
+            border: 1px solid var(--color-gray-800);
+            color: var(--color-gray-300);
+            padding: 0.5rem 1rem;
+            border-radius: 0.25rem;
+            cursor: pointer;
+            transition: background-color 0.2s, color 0.2s;
+        }
+
+        .filter-button:hover, .filter-button.active {
+            background-color: var(--color-orange-500);
+            color: var(--color-white);
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="container" style="padding-top: 2rem; padding-bottom: 2rem;">
+            <a href="index.html" class="back-button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M19 12H5"></path>
+                    <path d="M12 19l-7-7 7-7"></path>
+                </svg>
+                Home
+            </a>
+
+            <h1 class="page-title">Best GCash Casinos in the Philippines 2025</h1>
+            <p class="page-description">Compare all online casinos that accept GCash payments in the Philippines. Our experts have tested each site for fast deposits, withdrawal speeds, and bonus offers.</p>
+
+            <div class="filter-options">
+                <button class="filter-button active">All GCash Casinos</button>
+                <button class="filter-button">Fast Withdrawal</button>
+                <button class="filter-button">No Minimum Deposit</button>
+                <button class="filter-button">High Limit</button>
+                <button class="filter-button">New Casinos</button>
+            </div>
+
+            <!-- Casino Card 1 -->
+            <div class="casino-card">
+                <div class="casino-rank">1</div>
+                <div class="flex items-center">
+                    <a href="https://www.smgame777.cc?f=426081">
+                        <img src="https://epochph.pro/Game-icon/SmGame.jpg" alt="Smgame Casino Logo" class="casino-logo" width="150" height="150" loading="lazy">
+                    </a>
+                </div>
+
+                <div class="casino-details">
+                    <div class="casino-rating">
+                        <div class="rating-value">
+                            5<span>/5</span>
+                        </div>
+                        <div class="stars" aria-label="5 out of 5 stars rating">
+                            ★★★★★
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="casino-bonus">
+                            Get 100% up to ₱8888+
+                        </div>
+                        <div class="casino-terms">T&amp;Cs apply</div>
+                    </div>
+
+                    <ul class="features-list">
+                        <li>GCash, PayMaya, GrabPay</li>
+                        <li>Daily Cashback Rewards</li>
+                        <li>1500+ Slot Games</li>
+                        <li>Live Dealer Games</li>
+                        <li>Cockfighting (Sabong)</li>
+                    </ul>
+
+                    <div class="casino-actions">
+                        <a href="https://www.smgame777.cc?f=426081" class="play-button" rel="noreferrer nofollow noopener" target="_blank">
+                            Play Now
+                        </a>
+                        <a href="/reviews/smgame-casino/" class="read-review">
+                            Read Full Review
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Casino Card 2 -->
+            <div class="casino-card">
+                <div class="casino-rank">2</div>
+                <div class="flex items-center">
+                    <a href="https://facai88.club/af/GHzNR514/join">
+                        <img src="https://epochph.pro/Game-icon/mcw-casino.jpg" alt="MCW Casino Logo" class="casino-logo" width="150" height="150" loading="lazy">
+                    </a>
+                </div>
+
+                <div class="casino-details">
+                    <div class="casino-rating">
+                        <div class="rating-value">
+                            5<span>/5</span>
+                        </div>
+                        <div class="stars" aria-label="5 out of 5 stars rating">
+                            ★★★★★
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="casino-bonus">
+                            Get 100% up to ₱38888
+                        </div>
+                        <div class="casino-terms">T&amp;Cs apply</div>
+                    </div>
+
+                    <ul class="features-list">
+                        <li>GCash, PayMaya, GrabPay</li>
+                        <li>Daily Cashback Rewards</li>
+                        <li>1000+ Slot Games</li>
+                        <li>Live Dealer Games</li>
+                        <li>Fast Withdrawals</li>
+                    </ul>
+
+                    <div class="casino-actions">
+                        <a href="https://facai88.club/af/GHzNR514/join" class="play-button" rel="noreferrer nofollow noopener" target="_blank">
+                            Play Now
+                        </a>
+                        <a href="/reviews/mcw-casino/" class="read-review">
+                            Read Full Review
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Casino Card 3 -->
+            <div class="casino-card">
+                <div class="casino-rank">3</div>
+                <div class="flex items-center">
+                    <a href="https://www.22funph1.com/en-ph?aff=e2994672bd">
+                        <img src="https://epochph.pro/Game-icon/22Fun.webp" alt="22Fun Casino Logo" class="casino-logo" width="150" height="150" loading="lazy">
+                    </a>
+                </div>
+
+                <div class="casino-details">
+                    <div class="casino-rating">
+                        <div class="rating-value">
+                            5<span>/5</span>
+                        </div>
+                        <div class="stars" aria-label="5 out of 5 stars rating">
+                            ★★★★★
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="casino-bonus">
+                            Get 100% up to ₱25000
+                        </div>
+                        <div class="casino-terms">T&amp;Cs apply</div>
+                    </div>
+
+                    <ul class="features-list">
+                        <li>PAGCOR Licensed</li>
+                        <li>GCash Available</li>
+                        <li>Daily 30% Slot Reload Bonus</li>
+                        <li>800+ Slot Games</li>
+                        <li>Mobile-Friendly</li>
+                    </ul>
+
+                    <div class="casino-actions">
+                        <a href="https://www.22funph1.com/en-ph?aff=e2994672bd" class="play-button" rel="noreferrer nofollow noopener" target="_blank">
+                            Play Now
+                        </a>
+                        <a href="/reviews/22fun-casino/" class="read-review">
+                            Read Full Review
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Casino Card 4 -->
+            <div class="casino-card">
+                <div class="casino-rank">4</div>
+                <div class="flex items-center">
+                    <a href="https://www.oke12bet.xyz/?referral=cc974">
+                        <img src="https://epochph.pro/Game-icon/4okebet.jpg" alt="OKBET Casino Logo" class="casino-logo" width="150" height="150" loading="lazy">
+                    </a>
+                </div>
+
+                <div class="casino-details">
+                    <div class="casino-rating">
+                        <div class="rating-value">
+                            4.8<span>/5</span>
+                        </div>
+                        <div class="stars" aria-label="4.8 out of 5 stars rating">
+                            ★★★★★
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="casino-bonus">
+                            150% up to ₱20000 + 150 Free Spins
+                        </div>
+                        <div class="casino-terms">T&amp;Cs apply</div>
+                    </div>
+
+                    <ul class="features-list">
+                        <li>Filipino Customer Support</li>
+                        <li>Cockfighting (Sabong)</li>
+                        <li>Fast Withdrawals</li>
+                        <li>900+ Slot Games</li>
+                        <li>Mobile-Friendly</li>
+                    </ul>
+
+                    <div class="casino-actions">
+                        <a href="https://www.oke12bet.xyz/?referral=cc974" class="play-button" rel="noreferrer nofollow noopener" target="_blank">
+                            Play Now
+                        </a>
+                        <a href="https://www.oke12bet.xyz/?referral=cc974" class="read-review">
+                            Read Full Review
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Casino Card 5 -->
+            <div class="casino-card">
+                <div class="casino-rank">5</div>
+                <div class="flex items-center">
+                    <a href="#">
+                        <img src="https://epochph.pro/Game-icon/pnxbet.jpg" alt="PNXBET Casino Logo" class="casino-logo" width="150" height="150" loading="lazy">
+                    </a>
+                </div>
+
+                <div class="casino-details">
+                    <div class="casino-rating">
+                        <div class="rating-value">
+                            4.7<span>/5</span>
+                        </div>
+                        <div class="stars" aria-label="4.7 out of 5 stars rating">
+                            ★★★★★
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="casino-bonus">
+                            100% up to ₱15000 + 200 Free Spins
+                        </div>
+                        <div class="casino-terms">T&amp;Cs apply</div>
+                    </div>
+
+                    <ul class="features-list">
+                        <li>GCash & PayMaya</li>
+                        <li>No Minimum Deposit</li>
+                        <li>24/7 Live Chat Support</li>
+                        <li>Mobile App Available</li>
+                        <li>Esports Betting</li>
+                    </ul>
+
+                    <div class="casino-actions">
+                        <a href="#" class="play-button" rel="noreferrer nofollow noopener" target="_blank">
+                            Play Now
+                        </a>
+                        <a href="#" class="read-review">
+                            Read Full Review
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Casino Card 6 -->
+            <div class="casino-card">
+                <div class="casino-rank">6</div>
+                <div class="flex items-center">
+                    <a href="#">
+                        <img src="https://epochph.pro/Game-icon/luckynika.jpg" alt="Lucky Nika Casino Logo" class="casino-logo" width="150" height="150" loading="lazy">
+                    </a>
+                </div>
+
+                <div class="casino-details">
+                    <div class="casino-rating">
+                        <div class="rating-value">
+                            4.6<span>/5</span>
+                        </div>
+                        <div class="stars" aria-label="4.6 out of 5 stars rating">
+                            ★★★★★
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="casino-bonus">
+                            150% up to ₱18000 + 150 Free Spins
+                        </div>
+                        <div class="casino-terms">T&amp;Cs apply</div>
+                    </div>
+
+                    <ul class="features-list">
+                        <li>GCash & Bank Transfer</li>
+                        <li>5-Minute Withdrawals</li>
+                        <li>Weekly Cashback</li>
+                        <li>VIP Program</li>
+                        <li>Tagalog Support</li>
+                    </ul>
+
+                    <div class="casino-actions">
+                        <a href="#" class="play-button" rel="noreferrer nofollow noopener" target="_blank">
+                            Play Now
+                        </a>
+                        <a href="#" class="read-review">
+                            Read Full Review
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- GCash Information Section -->
+            <div class="gcash-info">
+                <h2>Why Use GCash at Online Casinos?</h2>
+                <p>GCash has become the most popular payment method for Filipino online casino players. This e-wallet offers numerous advantages over traditional banking methods:</p>
+                
+                <ul>
+                    <li><strong>Instant Deposits:</strong> Funds appear in your casino account immediately after confirming your GCash payment</li>
+                    <li><strong>Fast Withdrawals:</strong> Most GCash casinos process withdrawals within 15 minutes to 24 hours</li>
+                    <li><strong>Low Minimum Deposits:</strong> Start playing with as little as ₱100 at many GCash casinos</li>
+                    <li><strong>Enhanced Security:</strong> No need to share your bank details directly with the casino</li>
+                    <li><strong>Widely Available:</strong> Most reputable online casinos in the Philippines accept GCash</li>
+                    <li><strong>Mobile-Friendly:</strong> Perfect for players who prefer gambling on smartphones and tablets</li>
+                </ul>
+
+                <h3 style="margin-top: 1.5rem; margin-bottom: 0.75rem;">How to Deposit with GCash</h3>
+                <ol style="list-style-position: inside; margin-bottom: 1rem; color: var(--color-gray-300);">
+                    <li style="margin-bottom: 0.5rem;">Create an account at one of our recommended GCash casinos</li>
+                    <li style="margin-bottom: 0.5rem;">Navigate to the casino's cashier or deposit section</li>
+                    <li style="margin-bottom: 0.5rem;">Select GCash as your payment method</li>
+                    <li style="margin-bottom: 0.5rem;">Enter your deposit amount (check minimum requirements)</li>
+                    <li style="margin-bottom: 0.5rem;">You'll be redirected to GCash to confirm the payment</li>
+                    <li style="margin-bottom: 0.5rem;">Once confirmed, the funds will appear instantly in your casino account</li>
+                </ol>
+            </div>
+
+            <div style="text-align: center; margin: 2rem 0;">
+                <h3 style="margin-bottom: 1rem;">Popular GCash Casino Payment Methods</h3>
+                <div class="payment-methods" style="justify-content: center;">
+                    <div class="payment-method">
+                        <img src="https://epochph.pro/PopularPayment/Gcash-Logo.png" alt="GCash" title="GCash">
+                    </div>
+                    <div class="payment-method">
+                        <img src="https://epochph.pro/PopularPayment/pay-Maya-logo.png" alt="PayMaya" title="PayMaya">
+                    </div>
+                    <div class="payment-method">
+                        <img src="https://epochph.pro/PopularPayment/Grabpay.png" alt="GrabPay" title="GrabPay">
+                    </div>
+                    <div class="payment-method">
+                        <img src="https://epochph.pro/PopularPayment/bdo-logo.png" alt="BDO" title="BDO">
+                    </div>
+                    <div class="payment-method">
+                        <img src="https://epochph.pro/PopularPayment/bitcoin-logo.png" alt="Bitcoin" title="Bitcoin">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Simple filter functionality (for demonstration purposes)
+        const filterButtons = document.querySelectorAll('.filter-button');
+        
+        filterButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                // Remove active class from all buttons
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                
+                // Add active class to clicked button
+                this.classList.add('active');
+                
+                // In a real implementation, this would filter the casino list
+                // For this demo, we're just toggling the button styles
+            });
+        });
+    </script>
+</body>
+</html>
