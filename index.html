@@ -490,7 +490,7 @@
         "url": "https://epochph.pro/gcash-deposits/",
         "image": {
           "@type": "ImageObject",
-          "url": "https://epochph.pro/imagesImage/iconweb.png",
+          "url": "https://epochph.pro/Image/iconweb.png",
           "width": "800",
           "height": "600"
         }
@@ -502,7 +502,7 @@
         "url": "https://epochph.pro/gcash-deposits/",
         "image": {
           "@type": "ImageObject",
-          "url": "Image/iconweb.pngImage/iconweb.png",
+          "url": "https://epochph.pro/Image/iconweb.png",
           "width": "800",
           "height": "600"
         }
@@ -523,7 +523,7 @@
         "@type": "HowToStep",
         "name": "Complete the GCash payment",
         "text": "Follow the instructions to complete the payment through the GCash app or web interface. This may involve entering your GCash number and confirming the transaction.",
-        "url": "https://www.philippinescasinos.com/gcash-deposits/",
+        "url": "https://epochph.pro/gcash-deposits/",
         "image": {
           "@type": "ImageObject",
           "url": "https://epochph.pro/Image/iconweb.png",
@@ -603,6 +603,7 @@
     color: var(--color-white);
     line-height: 1.5;
     position: relative;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
   }
   
   a {
@@ -651,16 +652,12 @@
   }
   
   @media (min-width: 1024px) {
-    .lg\:grid-cols-3 {
-      grid-template-columns: 2fr 1fr;
-    }
-    
     .lg\:flex-row {
       flex-direction: row;
     }
     
     .lg\:w-2\/3 {
-      width: 100%;
+      width: 66.666667%;
     }
     
     .lg\:w-1\/3 {
@@ -671,10 +668,6 @@
   /* Flex utilities */
   .flex {
     display: flex;
-  }
-  
-  .flex-col {
-    flex-direction: column;
   }
   
   .flex-wrap {
@@ -1022,6 +1015,10 @@
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
   }
   
+  .shadow-lg {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  }
+  
   .transition {
     transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -1078,6 +1075,10 @@
     transform: translateY(-0.5rem);
   }
   
+  .hover\:scale-105:hover {
+    transform: scale(1.05);
+  }
+  
   /* Header */
   header {
     border-bottom: 1px solid var(--color-gray-800);
@@ -1086,12 +1087,14 @@
     z-index: 50;
     background-color: rgba(0, 0, 0, 0.95);
     backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px); /* For Safari */
   }
   
   .header-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 0.75rem 0;
   }
   
   .logo {
@@ -1106,7 +1109,7 @@
     margin-right: 0.5rem;
   }
   
-  .logo h1 {
+  .logo h2 {
     font-size: 1.25rem;
     font-weight: 700;
   }
@@ -1182,6 +1185,7 @@
     border: none;
     color: var(--color-white);
     cursor: pointer;
+    padding: 0.5rem;
   }
   
   @media (min-width: 768px) {
@@ -1283,6 +1287,7 @@
     justify-content: center;
     font-weight: bold;
     z-index: 1;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   }
   
   .casino-logo {
@@ -1292,6 +1297,7 @@
     border-radius: 0.5rem;
     border: 2px solid gold; /* Adds a 2px solid gold border */
     transition: transform 0.3s;
+    background-color: var(--color-gray-900);
   }
   
   .casino-card:hover .casino-logo {
@@ -1470,6 +1476,9 @@
     overflow: hidden;
     transition: transform 0.3s, box-shadow 0.3s;
     border: 1px solid var(--color-gray-800);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
   }
   
   .slot-card:hover {
@@ -1496,6 +1505,9 @@
   
   .slot-info {
     padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
   }
   
   .slot-title {
@@ -1554,6 +1566,7 @@
     flex-direction: column;
     align-items: center;
     border: 1px solid var(--color-gray-800);
+    height: 100%;
   }
   
   .game-category:hover {
@@ -1632,11 +1645,82 @@
     margin-bottom: 2rem;
   }
   
+  /* Mobile sidebar toggle button */
+  .sidebar-toggle {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--color-orange-500);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    z-index: 100;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Show sidebar toggle on mobile */
+  @media (max-width: 1023px) {
+    .sidebar-toggle {
+      display: flex;
+    }
+    
+    .sidebar {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 85%;
+      max-width: 350px;
+      height: 100%;
+      overflow-y: auto;
+      z-index: 1000;
+      transition: right 0.3s ease;
+      border-radius: 0;
+      margin-bottom: 0;
+    }
+    
+    .sidebar.active {
+      right: 0;
+    }
+    
+    .sidebar-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      z-index: 999;
+    }
+    
+    .sidebar-overlay.active {
+      display: block;
+    }
+    
+    .sidebar-close {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: none;
+      border: none;
+      color: var(--color-white);
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+  }
+  
   @media (min-width: 1024px) {
     .sidebar {
       position: sticky;
       top: 5rem;
       margin-bottom: 0;
+      height: fit-content;
     }
   }
   
@@ -1644,10 +1728,13 @@
     color: var(--color-amber-500);
     margin-bottom: 1rem;
     font-weight: 600;
+    font-size: 1.25rem;
   }
   
   .toc {
     list-style: none;
+    margin: 0;
+    padding: 0;
   }
   
   .toc li {
@@ -1841,6 +1928,8 @@
   
   .footer-links {
     list-style: none;
+    margin: 0;
+    padding: 0;
   }
   
   .footer-links li {
@@ -2006,6 +2095,94 @@
     white-space: nowrap;
     border-width: 0;
   }
+
+  /* Responsive improvements for mobile */
+  @media (max-width: 767px) {
+    .container {
+      padding: 0 0.75rem;
+    }
+    
+    h1, h2 {
+      font-size: 1.5rem;
+    }
+    
+    .casino-card {
+      padding: 0.75rem;
+    }
+    
+    .casino-logo {
+      max-width: 120px;
+      height: 120px;
+      margin: 0 auto;
+    }
+    
+    .casino-details {
+      gap: 0.75rem;
+    }
+    
+    .features-list li {
+      font-size: 0.75rem;
+    }
+    
+    .slot-image-container {
+      height: 120px;
+    }
+    
+    .payment-method {
+      width: 80px;
+      height: 50px;
+    }
+    
+    .game-category {
+      padding: 1rem;
+    }
+    
+    .game-icon {
+      font-size: 1.5rem;
+    }
+    
+    .game-category h3 {
+      font-size: 1rem;
+    }
+    
+    .cta-banner {
+      padding: 1.5rem 1rem;
+    }
+    
+    .cta-buttons {
+      flex-direction: column;
+    }
+  }
+
+  /* Fix for sidebar on tablets */
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .sidebar-container {
+      width: 100%;
+    }
+  }
+
+  /* Improved hover effects for touch devices */
+  @media (hover: none) {
+    .hover\:-translate-y-1:hover,
+    .hover\:-translate-y-2:hover,
+    .hover\:scale-105:hover {
+      transform: none;
+    }
+    
+    .play-button:hover::before,
+    .cta-primary:hover::before {
+      left: -100%;
+    }
+  }
+
+  /* Fix for the toc-hidden items */
+  .toc-hidden {
+    display: none;
+  }
+  
+  .toc-expanded .toc-hidden {
+    display: block;
+  }
 </style>
 </head>
 <body>
@@ -2014,7 +2191,7 @@
   
   <!-- Header Section - Contains navigation and branding -->
   <header>
-    <div class="container py-4">
+    <div class="container">
       <div class="header-container">
         <div class="logo">
           <a href="#top-casinos" aria-label="Philippines Casinos Home">
@@ -2029,7 +2206,7 @@
         <nav class="desktop-nav">
           <div class="nav-item">
             <span>GCash Casinos</span>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <path d="m6 9 6 6 6-6"></path>
             </svg>
             <div class="nav-dropdown">
@@ -2039,7 +2216,7 @@
           </div>
           <div class="nav-item">
             <span>Free Demo Slots</span>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <path d="m6 9 6 6 6-6"></path>
             </svg>
             <div class="nav-dropdown">
@@ -2048,7 +2225,7 @@
           </div>
           <div class="nav-item">
             <span>Bonuses</span>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <path d="m6 9 6 6 6-6"></path>
             </svg>
             <div class="nav-dropdown">
@@ -2060,7 +2237,7 @@
           </div>
           <div class="nav-item">
             <span>Reviews</span>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <path d="m6 9 6 6 6-6"></path>
             </svg>
             <div class="nav-dropdown">
@@ -2073,7 +2250,7 @@
           </div>
           <div class="nav-item">
             <span>Slots</span>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <path d="m6 9 6 6 6-6"></path>
             </svg>
             <div class="nav-dropdown">
@@ -2086,7 +2263,7 @@
           </div>
           <div class="nav-item">
             <span>Sports Betting</span>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <path d="m6 9 6 6 6-6"></path>
             </svg>
             <div class="nav-dropdown">
@@ -2096,6 +2273,8 @@
               <a href="/sports-betting/cockfighting/">Sabong</a>
               <a href="/sports-betting/mobile-legends/">Mobile Legends</a>
             </div>
+          </div>
+        </nav>
         
         <!-- Mobile Menu Button -->
         <button id="mobile-menu-toggle" aria-label="Menu" class="mobile-menu-button">
@@ -2136,7 +2315,7 @@
               <path d="m6 9 6 6 6-6"></path>
             </svg>
           </a>
-          <a href="#top-casinos">
+          <a href="#popular-slots">
             <span>Slots</span>
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <path d="m6 9 6 6 6-6"></path>
@@ -2195,7 +2374,7 @@
               <!-- Casino Card 1 -->
               <div class="casino-card">
                 <div class="casino-rank">1</div>
-                <div class="flex items-center">
+                <div class="flex items-center justify-center">
                   <a href="https://www.smgame777.cc?f=426081">
                     <img src="Game-icon/SmGame.jpg" alt="Smgame Casino Logo" class="casino-logo" width="150" height="150" loading="lazy">
                   </a>
@@ -2230,7 +2409,7 @@
               <!-- Casino Card 2 -->
               <div class="casino-card">
                 <div class="casino-rank">2</div>
-                <div class="flex items-center">
+                <div class="flex items-center justify-center">
                   <a href="https://facai88.club/af/GHzNR514/join">
                     <img src="Game-icon/mcw-casino.jpg" alt="MCW Casino Logo" class="casino-logo" width="150" height="150" loading="lazy">
                   </a>
@@ -2265,7 +2444,7 @@
               <!-- Casino Card 3 -->
               <div class="casino-card">
                 <div class="casino-rank">3</div>
-                <div class="flex items-center">
+                <div class="flex items-center justify-center">
                   <a href="https://www.22funph1.com/en-ph?aff=e2994672bd">
                     <img src="Game-icon/22Fun.webp" alt="22Fun Casino Logo" class="casino-logo" width="150" height="150" loading="lazy">
                   </a>
@@ -2300,7 +2479,7 @@
               <!-- Casino Card 4 -->
               <div class="casino-card">
                 <div class="casino-rank">4</div>
-                <div class="flex items-center">
+                <div class="flex items-center justify-center">
                   <a href="https://www.oke12bet.xyz/?referral=cc974">
                     <img src="Game-icon/4okebet.jpg" alt="OKBET Casino Logo" class="casino-logo" width="150" height="150" loading="lazy">
                   </a>
@@ -2354,7 +2533,7 @@
               <div class="slot-card">
                 <div class="slot-image-container">
                   <span class="demo-badge">FREE DEMO</span>
-                  <img src="https://epochph.pro/Image/sweet-bonanza-logo (1).webp" alt="Sweet Bonanza Slot" class="slot-image" width="300" height="200" loading="lazy">
+                  <img src="Image/sweet-bonanza-logo (1).webp" alt="Sweet Bonanza Slot" class="slot-image" width="300" height="200" loading="lazy">
                 </div>
                 <div class="slot-info">
                   <h3 class="slot-title">Sweet Bonanza</h3>
@@ -2550,6 +2729,55 @@
             </div>
           </section>
           
+          <!-- Top Queries Section -->
+<section id="top-queries" class="mb-12 mt-12">
+  <h2 class="text-2xl sm:text-3xl font-bold mb-6">
+    Top Queries About Online Casinos in the Philippines
+  </h2>
+  <p class="text-gray-300 mb-6">
+    Discover what Filipino players are searching for when looking for the best online casino experiences:
+  </p>
+  
+  <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
+    <a href="/gcash-casinos" class="bg-gray-900 hover:bg-gray-800 p-3 rounded-lg text-center transition-all hover:-translate-y-1 border border-gray-800">
+      <span class="text-amber-500 block mb-1">🔍</span>
+      <span>Best GCash Casinos</span>
+    </a>
+    <a href="/no-deposit-bonus" class="bg-gray-900 hover:bg-gray-800 p-3 rounded-lg text-center transition-all hover:-translate-y-1 border border-gray-800">
+      <span class="text-amber-500 block mb-1">🔍</span>
+      <span>No Deposit Bonus Philippines</span>
+    </a>
+    <a href="/fast-withdrawal-casinos" class="bg-gray-900 hover:bg-gray-800 p-3 rounded-lg text-center transition-all hover:-translate-y-1 border border-gray-800">
+      <span class="text-amber-500 block mb-1">🔍</span>
+      <span>Fast Withdrawal Casinos</span>
+    </a>
+    <a href="/pagcor-licensed-casinos" class="bg-gray-900 hover:bg-gray-800 p-3 rounded-lg text-center transition-all hover:-translate-y-1 border border-gray-800">
+      <span class="text-amber-500 block mb-1">🔍</span>
+      <span>PAGCOR Licensed Casinos</span>
+    </a>
+    <a href="/mobile-casino-apps" class="bg-gray-900 hover:bg-gray-800 p-3 rounded-lg text-center transition-all hover:-translate-y-1 border border-gray-800">
+      <span class="text-amber-500 block mb-1">🔍</span>
+      <span>Mobile Casino Apps Philippines</span>
+    </a>
+    <a href="/online-sabong" class="bg-gray-900 hover:bg-gray-800 p-3 rounded-lg text-center transition-all hover:-translate-y-1 border border-gray-800">
+      <span class="text-amber-500 block mb-1">🔍</span>
+      <span>Online Sabong Sites</span>
+    </a>
+    <a href="/best-slot-games" class="bg-gray-900 hover:bg-gray-800 p-3 rounded-lg text-center transition-all hover:-translate-y-1 border border-gray-800">
+      <span class="text-amber-500 block mb-1">🔍</span>
+      <span>Best Slot Games 2025</span>
+    </a>
+    <a href="/casino-welcome-bonuses" class="bg-gray-900 hover:bg-gray-800 p-3 rounded-lg text-center transition-all hover:-translate-y-1 border border-gray-800">
+      <span class="text-amber-500 block mb-1">🔍</span>
+      <span>Biggest Welcome Bonuses</span>
+    </a>
+    <a href="/crypto-casinos" class="bg-gray-900 hover:bg-gray-800 p-3 rounded-lg text-center transition-all hover:-translate-y-1 border border-gray-800">
+      <span class="text-amber-500 block mb-1">🔍</span>
+      <span>Crypto Casinos Philippines</span>
+    </a>
+  </div>
+</section>
+          
           <section id="faq" class="faq-container">
             <h2 class="text-2xl sm:text-3xl font-bold mb-8">
               Frequently Asked Questions About Online Casinos in the Philippines
@@ -2625,10 +2853,585 @@
               </div>
             </div>
           </section>
+
+          <!-- SEO Enhancement Section -->
+          <section id="seo-section" class="mt-12 border-t border-gray-800 pt-8">
+            <h2 class="text-2xl sm:text-3xl font-bold mb-6">Why Choose Online Casinos in the Philippines</h2>
+
+            <div class="relative mb-12 overflow-hidden rounded-xl bg-gradient-to-br from-gray-900 via-gray-900 to-gray-900/80 p-1">
+                <div class="absolute inset-0 bg-gradient-to-br from-amber-500/20 via-orange-500/10 to-red-500/20 animate-pulse-slow"></div>
+
+                <div class="relative p-6 bg-gray-900/90 rounded-lg backdrop-blur-sm">
+                    <div class="flex flex-col md:flex-row gap-8">
+                        <div class="md:w-1/2">
+                            <div class="inline-block px-4 py-1 bg-gradient-to-r from-amber-500 to-orange-500 rounded-full text-black font-semibold text-sm mb-4 shadow-lg shadow-amber-500/20">
+                                #1 CHOICE FOR FILIPINO PLAYERS
+                            </div>
+
+                            <h3 class="text-2xl font-bold mb-4 bg-gradient-to-r from-amber-400 to-orange-500 bg-clip-text text-transparent">
+                                Benefits of Online Gambling in the Philippines
+                            </h3>
+
+                            <p class="text-gray-300 mb-6 text-lg">
+                                Filipino players enjoy numerous advantages when playing at online casinos compared to
+                                traditional land-based establishments. Experience gaming excellence with:
+                            </p>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+                                <div class="bg-gray-800/70 p-4 rounded-lg border-l-2 border-amber-500 transform transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
+                                    <div class="flex items-center mb-2">
+                                        <div class="w-8 h-8 rounded-full bg-amber-500/20 flex items-center justify-center mr-3">
+                                            <span class="text-amber-500 text-lg">🌐</span>
+                                        </div>
+                                        <h4 class="font-semibold">Global Access</h4>
+                                    </div>
+                                    <p class="text-gray-300 text-sm">
+                                        Play international casino games without leaving your home
+                                    </p>
+                                </div>
+
+                                <div class="bg-gray-800/70 p-4 rounded-lg border-l-2 border-green-500 transform transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
+                                    <div class="flex items-center mb-2">
+                                        <div class="w-8 h-8 rounded-full bg-green-500/20 flex items-center justify-center mr-3">
+                                            <span class="text-green-500 text-lg">💰</span>
+                                        </div>
+                                        <h4 class="font-semibold">Higher Returns</h4>
+                                    </div>
+                                    <p class="text-gray-300 text-sm">Enjoy better RTP percentages than land-based casinos</p>
+                                </div>
+
+                                <div class="bg-gray-800/70 p-4 rounded-lg border-l-2 border-blue-400 transform transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
+                                    <div class="flex items-center mb-2">
+                                        <div class="w-8 h-8 rounded-full bg-blue-400/20 flex items-center justify-center mr-3">
+                                            <span class="text-blue-400 text-lg">🎁</span>
+                                        </div>
+                                        <h4 class="font-semibold">Exclusive Bonuses</h4>
+                                    </div>
+                                    <p class="text-gray-300 text-sm">Access special promotions and loyalty rewards</p>
+                                </div>
+
+                                <div class="bg-gray-800/70 p-4 rounded-lg border-l-2 border-purple-500 transform transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
+                                    <div class="flex items-center mb-2">
+                                        <div class="w-8 h-8 rounded-full bg-purple-500/20 flex items-center justify-center mr-3">
+                                            <span class="text-purple-500 text-lg">₱</span>
+                                        </div>
+                                        <h4 class="font-semibold">Local Currency</h4>
+                                    </div>
+                                    <p class="text-gray-300 text-sm">Play in Philippine Peso without conversion fees</p>
+                                </div>
+                            </div>
+
+                            <a href="https://www.smgame777.cc?f=426081" class="inline-flex items-center px-6 py-3 bg-gradient-to-r from-amber-500 to-orange-500 text-black font-semibold rounded-lg transform transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-amber-500/30">
+                                Start Playing Now
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-2">
+                                    <path d="M5 12h14"></path>
+                                    <path d="m12 5 7 7-7 7"></path>
+                                </svg>
+                            </a>
+                        </div>
+
+                        <div class="md:w-1/2">
+                            <div class="relative h-[400px] rounded-lg overflow-hidden group">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent z-10"></div>
+                                <div class="absolute -inset-1 bg-gradient-to-r from-amber-500/30 to-orange-500/30 rounded-lg blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+                                <img src="/Image/philippines-online-casino-players.jpg" alt="Filipino players enjoying online casino games on mobile devices" class="object-cover w-full h-full z-0 transition-transform duration-700 group-hover:scale-110">
+
+                                <div class="absolute top-4 right-4 bg-gradient-to-r from-amber-500 to-orange-500 text-black text-xs font-bold py-1 px-3 rounded-full z-20 shadow-lg">
+                                    PREMIUM EXPERIENCE
+                                </div>
+
+                                <div class="absolute bottom-0 left-0 right-0 p-6 z-20">
+                                    <div class="bg-black/60 p-4 rounded-lg backdrop-blur-sm border-l-2 border-amber-500 transform transition-all duration-500 translate-y-2 group-hover:translate-y-0">
+                                        <h4 class="text-lg font-semibold text-white mb-2">
+                                            Why Filipino Players Choose Online Casinos
+                                        </h4>
+                                        <p class="text-gray-300 text-sm">
+                                            Experience the convenience of playing your favorite casino games anytime, anywhere in the
+                                            Philippines with secure payment methods like GCash and PayMaya.
+                                        </p>
+
+                                        <div class="flex items-center mt-4 space-x-2">
+                                            <div class="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center">
+                                                <span class="text-amber-500">🔒</span>
+                                            </div>
+                                            <span class="text-xs text-gray-300">Secure & Licensed</span>
+
+                                            <div class="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center ml-4">
+                                                <span class="text-amber-500">⚡</span>
+                                            </div>
+                                            <span class="text-xs text-gray-300">Fast Payouts</span>
+
+                                            <div class="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center ml-4">
+                                                <span class="text-amber-500">🇵🇭</span>
+                                            </div>
+                                            <span class="text-xs text-gray-300">Filipino Support</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Casino Bonuses Section -->
+            <div class="bg-gradient-to-r from-gray-900 to-amber-900/20 p-6 rounded-lg mb-8 border border-amber-500/20">
+                <h3 class="text-xl font-semibold mb-4 text-center">
+                    Best Online Casino Bonuses for Filipino Players in 2025
+                </h3>
+                <p class="text-gray-300 mb-6">
+                    Filipino players can maximize their gaming experience with these exclusive casino bonuses. Our team
+                    has negotiated special promotional offers with top-rated online casinos to give you more value for
+                    your deposits.
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-gray-800 p-4 rounded-lg text-center relative overflow-hidden">
+                        <div class="absolute top-0 right-0 bg-amber-500 text-black text-xs font-bold py-1 px-3 rounded-bl">
+                            EXCLUSIVE
+                        </div>
+                        <div class="text-3xl mb-2 text-amber-500 font-bold">₱38,888</div>
+                        <h4 class="font-semibold mb-2">Welcome Package</h4>
+                        <p class="text-xs text-gray-400 mb-3">100% match on first deposit + 150 free spins</p>
+                        <p class="text-xs text-gray-400 mb-3">Wagering: 30x | Min. Deposit: ₱500</p>
+                        <a href="https://facai88.club/af/GHzNR514/join" class="block w-full bg-amber-500 hover:bg-amber-600 text-black font-medium py-2 rounded text-sm transition-colors">
+                            Claim Bonus
+                        </a>
+                    </div>
+
+                    <div class="bg-gray-800 p-4 rounded-lg text-center">
+                        <div class="text-3xl mb-2 text-green-500 font-bold">15%</div>
+                        <h4 class="font-semibold mb-2">Daily Cashback</h4>
+                        <p class="text-xs text-gray-400 mb-3">Get 15% back on all daily losses</p>
+                        <p class="text-xs text-gray-400 mb-3">No wagering requirements | Instant withdrawal</p>
+                        <a href="https://www.smgame777.cc?f=426081" class="block w-full bg-green-500 hover:bg-green-600 text-black font-medium py-2 rounded text-sm transition-colors">
+                            Get Cashback
+                        </a>
+                    </div>
+
+                    <div class="bg-gray-800 p-4 rounded-lg text-center">
+                        <div class="text-3xl mb-2 text-blue-400 font-bold">200</div>
+                        <h4 class="font-semibold mb-2">Free Spins</h4>
+                        <p class="text-xs text-gray-400 mb-3">No deposit required | New players only</p>
+                        <p class="text-xs text-gray-400 mb-3">Valid for: Sweet Bonanza, Gates of Olympus</p>
+                        <a href="https://www.22funph1.com/en-ph?aff=e2994672bd" class="block w-full bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 rounded text-sm transition-colors">
+                            Claim Free Spins
+                        </a>
+                    </div>
+                </div>
+
+                <div class="mt-6 bg-gray-800 p-4 rounded-lg">
+                    <h4 class="font-semibold mb-3 text-center">How to Claim Your Casino Bonus</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-4 gap-4 text-center">
+                        <div class="p-3">
+                            <div class="w-8 h-8 bg-amber-500 rounded-full flex items-center justify-center text-black font-bold mx-auto mb-2">
+                                1
+                            </div>
+                            <p class="text-sm">Register an account at your chosen casino</p>
+                        </div>
+                        <div class="p-3">
+                            <div class="w-8 h-8 bg-amber-500 rounded-full flex items-center justify-center text-black font-bold mx-auto mb-2">
+                                2
+                            </div>
+                            <p class="text-sm">Verify your account via email or SMS</p>
+                        </div>
+                        <div class="p-3">
+                            <div class="w-8 h-8 bg-amber-500 rounded-full flex items-center justify-center text-black font-bold mx-auto mb-2">
+                                3
+                            </div>
+                            <p class="text-sm">Make a qualifying deposit using GCash or PayMaya</p>
+                        </div>
+                        <div class="p-3">
+                            <div class="w-8 h-8 bg-amber-500 rounded-full flex items-center justify-center text-black font-bold mx-auto mb-2">
+                                4
+                            </div>
+                            <p class="text-sm">Bonus is credited automatically to your account</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-6 text-sm text-gray-400 text-center">
+                    <p>
+                        All bonuses are subject to terms and conditions. Please gamble responsibly and only play with money
+                        you can afford to lose.
+                    </p>
+                    <a href="/bonus-terms" class="text-blue-400 hover:underline">
+                        View full bonus terms and conditions →
+                    </a>
+                </div>
+            </div>
+
+            <div class="mb-8">
+                <h3 class="text-xl font-semibold mb-4 text-amber-500">
+                    Online Gambling Regulations in the Philippines
+                </h3>
+                <p class="text-gray-300 mb-4">
+                    The Philippine Amusement and Gaming Corporation (PAGCOR) is the main regulatory body overseeing
+                    gambling activities in the Philippines. While PAGCOR licenses and regulates land-based casinos and
+                    some online operators, many international online casinos accept Filipino players under licenses from
+                    other jurisdictions like Curacao, Malta, and the Isle of Man.
+                </p>
+                <p class="text-gray-300 mb-4">
+                    Filipino players should look for casinos with valid licenses, fair gaming certifications, and proper
+                    security measures. All casinos recommended on our site have been verified for their licensing status
+                    and regulatory compliance to ensure a safe gambling environment.
+                </p>
+
+                <div class="flex items-center justify-center my-6">
+                    <a href="https://www.pagcor.ph/index.php" class="flex items-center bg-gray-800 px-4 py-2 rounded-lg hover:bg-gray-700 transition-colors">
+                        <span class="mr-2">Learn more about PAGCOR regulations</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                            <polyline points="15 3 21 3 21 9" />
+                            <line x1="10" x2="21" y1="14" y2="3" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 mb-8">
+                <div>
+                    <h3 class="text-xl font-semibold mb-4 text-amber-500">Mobile Casino Gaming in the Philippines</h3>
+                    <p class="text-gray-300 mb-4">
+                        With over 79 million smartphone users in the Philippines, mobile casino gaming has become the
+                        preferred way to play. All top online casinos now offer mobile-optimized websites or dedicated apps
+                        for Android and iOS devices.
+                    </p>
+                    <p class="text-gray-300">
+                        Filipino players can enjoy hundreds of slots, table games, and live dealer experiences directly from
+                        their smartphones. Mobile casinos also support GCash and PayMaya transactions, making deposits and
+                        withdrawals convenient for players on the go.
+                    </p>
+                </div>
+
+                <div class="bg-gray-900 p-4 rounded-lg">
+                    <h4 class="font-semibold mb-3">Top Mobile Casino Features for Filipino Players:</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li class="flex items-start">
+                            <span class="text-amber-500 mr-2">•</span>
+                            <span>Optimized for both Android and iOS devices</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-amber-500 mr-2">•</span>
+                            <span>Fast loading times on 4G and 5G networks</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-amber-500 mr-2">•</span>
+                            <span>Touch-optimized game controls</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-amber-500 mr-2">•</span>
+                            <span>Mobile-exclusive bonuses and promotions</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-amber-500 mr-2">•</span>
+                            <span>Seamless GCash and PayMaya integration</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-amber-500 mr-2">•</span>
+                            <span>Push notifications for new bonuses and games</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Rich Snippet Schema -->
+            <div class="hidden" itemscope itemtype="https://schema.org/FAQPage">
+                <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <h3 itemprop="name">What is the best online casino in the Philippines?</h3>
+                    <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <div itemprop="text">
+                            Based on our expert reviews, Smgame Casino is currently the best online casino for Filipino
+                            players, offering a 100% bonus up to ₱8888, GCash payments, and over 1500 slot games.
+                        </div>
+                    </div>
+                </div>
+
+                <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <h3 itemprop="name">Are online casinos legal in the Philippines?</h3>
+                    <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <div itemprop="text">
+                            Yes, online gambling is legal in the Philippines for offshore operators with proper licensing.
+                            Filipino players can legally access international online casinos that hold valid licenses from
+                            reputable gaming authorities like PAGCOR, Curacao, or Malta.
+                        </div>
+                    </div>
+                </div>
+
+                <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <h3 itemprop="name">Can I use GCash at online casinos in the Philippines?</h3>
+                    <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <div itemprop="text">
+                            Yes, many top online casinos in the Philippines accept GCash for both deposits and withdrawals.
+                            GCash is one of the most popular payment methods for Filipino players due to its convenience,
+                            speed, and wide acceptance.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-8">
+                <h3 class="text-xl font-semibold mb-4 text-amber-500">
+                    Winning Strategies for Popular Casino Games in the Philippines
+                </h3>
+                <p class="text-gray-300 mb-4">
+                    Filipino players can improve their chances of winning by understanding game mechanics and implementing
+                    proven strategies. While casino games are primarily based on luck, these approaches can help maximize
+                    your entertainment value and potentially extend your playing sessions.
+                </p>
+
+                <div class="grid md:grid-cols-2 gap-6 mt-6">
+                    <div class="bg-gray-800 p-5 rounded-lg border-l-4 border-amber-500">
+                        <h4 class="font-semibold text-lg mb-3">Slot Machine Strategy Guide</h4>
+                        <ul class="space-y-2 text-gray-300">
+                            <li class="flex items-start">
+                                <span class="text-green-500 mr-2 font-bold">•</span>
+                                <span>
+                                    <span class="font-medium">Understand RTP:</span> Choose slots with higher RTP (Return to
+                                    Player) percentages like Fortune Tiger (96.8%) or Gates of Olympus (96.5%)
+                                </span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-green-500 mr-2 font-bold">•</span>
+                                <span>
+                                    <span class="font-medium">Volatility matters:</span> Low volatility slots pay smaller
+                                    amounts more frequently, while high volatility slots offer larger but less frequent wins
+                                </span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-green-500 mr-2 font-bold">•</span>
+                                <span>
+                                    <span class="font-medium">Bankroll management:</span> Set a budget and stick to it,
+                                    dividing your funds into smaller sessions
+                                </span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-green-500 mr-2 font-bold">•</span>
+                                <span>
+                                    <span class="font-medium">Try free demos first:</span> Practice with our free demo slots
+                                    before playing with real money
+                                </span>
+                            </li>
+                        </ul>
+                        <a href="/guides/slot-strategy" class="inline-block mt-4 text-blue-400 hover:underline text-sm">
+                            Read our complete slot strategy guide →
+                        </a>
+                    </div>
+
+                    <div class="bg-gray-800 p-5 rounded-lg border-l-4 border-amber-500">
+                        <h4 class="font-semibold text-lg mb-3">Baccarat Tips for Filipino Players</h4>
+                        <p class="text-gray-300 mb-3">
+                            Baccarat is one of the most popular table games in the Philippines, especially in its online live
+                            dealer format. These tips can help improve your experience:
+                        </p>
+                        <ul class="space-y-2 text-gray-300">
+                            <li class="flex items-start">
+                                <span class="text-green-500 mr-2 font-bold">•</span>
+                                <span>Banker bets have the lowest house edge (1.06%)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-green-500 mr-2 font-bold">•</span>
+                                <span>Avoid tie bets despite their high payout (house edge of 14.36%)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-green-500 mr-2 font-bold">•</span>
+                                <span>Use the 1-3-2-6 betting system to manage your bankroll</span>
+                            </li>
+                        </ul>
+                        <a href="/guides/baccarat-strategy" class="inline-block mt-4 text-blue-400 hover:underline text-sm">
+                            Master baccarat with our complete guide →
+                        </a>
+                    </div>
+                </div>
+
+                <div class="bg-gray-900 p-5 rounded-lg mt-6 border border-gray-800">
+                    <h4 class="font-semibold text-lg mb-3 text-center">
+                        Most Profitable Casino Games for Filipino Players
+                    </h4>
+                    <div class="overflow-x-auto">
+                        <table class="w-full border-collapse">
+                            <thead>
+                                <tr class="bg-gray-800 text-left">
+                                    <th class="p-3 rounded-tl-lg">Game</th>
+                                    <th class="p-3">House Edge</th>
+                                    <th class="p-3">Skill Level</th>
+                                    <th class="p-3 rounded-tr-lg">Best For</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-gray-800">
+                                <tr>
+                                    <td class="p-3">Blackjack</td>
+                                    <td class="p-3 text-green-500">0.5% - 1%</td>
+                                    <td class="p-3">Medium</td>
+                                    <td class="p-3">Strategic players</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-3">Baccarat (Banker)</td>
+                                    <td class="p-3 text-green-500">1.06%</td>
+                                    <td class="p-3">Low</td>
+                                    <td class="p-3">Beginners</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-3">European Roulette</td>
+                                    <td class="p-3 text-yellow-500">2.7%</td>
+                                    <td class="p-3">Low</td>
+                                    <td class="p-3">Casual players</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-3">Video Poker</td>
+                                    <td class="p-3 text-green-500">0.5% - 3%</td>
+                                    <td class="p-3">High</td>
+                                    <td class="p-3">Analytical players</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-3">Slots (High RTP)</td>
+                                    <td class="p-3 text-yellow-500">3% - 4%</td>
+                                    <td class="p-3">Low</td>
+                                    <td class="p-3">Entertainment-focused</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="text-sm text-gray-400 mt-4 text-center">
+                        *House edge varies depending on specific game variants and rules. Lower house edge means better odds
+                        for players.
+                    </p>
+                </div>
+
+                <div class="mt-6 p-4 bg-gradient-to-r from-amber-500/10 to-gray-900 rounded-lg border border-amber-500/20">
+                    <div class="flex items-start">
+                        <div class="text-3xl mr-4">💡</div>
+                        <div>
+                            <h4 class="font-semibold text-amber-500">Pro Tip for Filipino Players</h4>
+                            <p class="text-gray-300">
+                                Always check if an online casino offers a practice or demo mode before playing with real money.
+                                This allows you to understand the game mechanics, test different strategies, and find games that
+                                match your playing style without risking your bankroll.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-8">
+                <h3 class="text-xl font-semibold mb-4 text-amber-500">
+                    Online Casino Banking for Filipino Players
+                </h3>
+                <p class="text-gray-300 mb-4">
+                    Understanding the banking options at online casinos is crucial for a smooth gaming experience.
+                    Filipino players have access to several convenient payment methods for deposits and withdrawals.
+                </p>
+
+                <div class="overflow-x-auto">
+                    <table class="w-full border-collapse bg-gray-900 rounded-lg overflow-hidden">
+                        <thead>
+                            <tr class="bg-gray-800">
+                                <th class="p-3 text-left">Payment Method</th>
+                                <th class="p-3 text-left">Deposit Time</th>
+                                <th class="p-3 text-left">Withdrawal Time</th>
+                                <th class="p-3 text-left">Fees</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-800">
+                            <tr>
+                                <td class="p-3">GCash</td>
+                                <td class="p-3">Instant</td>
+                                <td class="p-3">1-24 hours</td>
+                                <td class="p-3">Free at most casinos</td>
+                            </tr>
+                            <tr>
+                                <td class="p-3">PayMaya</td>
+                                <td class="p-3">Instant</td>
+                                <td class="p-3">1-24 hours</td>
+                                <td class="p-3">Free at most casinos</td>
+                            </tr>
+                            <tr>
+                                <td class="p-3">Bank Transfer</td>
+                                <td class="p-3">1-3 business days</td>
+                                <td class="p-3">1-5 business days</td>
+                                <td class="p-3">Varies by bank</td>
+                            </tr>
+                            <tr>
+                                <td class="p-3">Cryptocurrency</td>
+                                <td class="p-3">10-30 minutes</td>
+                                <td class="p-3">1-24 hours</td>
+                                <td class="p-3">Network fees only</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p class="text-sm text-gray-400 mt-3">
+                    Note: Processing times and fees may vary between different online casinos. Always check the specific
+                    terms at your chosen casino.
+                </p>
+            </div>
+
+            <div class="bg-gradient-to-r from-gray-900 to-gray-950 rounded-lg p-6 mb-8 border border-gray-800">
+                <h3 class="text-xl font-semibold mb-4">Latest Online Casino Trends in the Philippines (2025)</h3>
+                <div class="grid md:grid-cols-3 gap-4">
+                    <div class="bg-gray-800 p-4 rounded-lg">
+                        <h4 class="font-semibold text-amber-500 mb-2">Cryptocurrency Adoption</h4>
+                        <p class="text-sm text-gray-300">
+                            More Filipino players are using Bitcoin, Ethereum, and Tether for faster withdrawals and enhanced
+                            privacy at online casinos.
+                        </p>
+                    </div>
+
+                    <div class="bg-gray-800 p-4 rounded-lg">
+                        <h4 class="font-semibold text-amber-500 mb-2">Live Game Shows</h4>
+                        <p class="text-sm text-gray-300">
+                            Game show-style live dealer games like Crazy Time and Monopoly Live are gaining popularity among
+                            Filipino players.
+                        </p>
+                    </div>
+
+                    <div class="bg-gray-800 p-4 rounded-lg">
+                        <h4 class="font-semibold text-amber-500 mb-2">Mobile-First Gaming</h4>
+                        <p class="text-sm text-gray-300">
+                            With 79% of Filipinos accessing the internet via smartphones, casinos are prioritizing mobile
+                            experiences.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="https://www.smgame777.cc?f=426081" class="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 px-8 rounded-lg transition-all hover:-translate-y-1 inline-flex items-center">
+                    <span>Start Playing at the Best Philippine Online Casino</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-2">
+                        <path d="M5 12h14"></path>
+                        <path d="m12 5 7 7-7 7"></path>
+                    </svg>
+                </a>
+            </div>
+        </section>
         </div>
         
-        <div class="lg:w-1/3">
-          <div class="sidebar">
+        <!-- Sidebar Toggle Button for Mobile -->
+        <button id="sidebar-toggle" class="sidebar-toggle">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+        
+        <!-- Sidebar Overlay for Mobile -->
+        <div id="sidebar-overlay" class="sidebar-overlay"></div>
+        
+        <!-- Sidebar -->
+        <div id="sidebar" class="lg:w-1/3 sidebar-container">
+          <div id="sidebar-content" class="sidebar">
+            <!-- Close button for mobile sidebar -->
+            <button id="sidebar-close" class="sidebar-close md:hidden">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+              </svg>
+            </button>
+            
             <h3 class="sidebar-title">
               On this page
             </h3>
@@ -2651,7 +3454,10 @@
                   <a href="#how-we-rate">5. How We Rate Casinos</a>
                 </li>
                 <li>
-                  <a href="#faq">6. FAQ</a>
+                  <a href="#top-queries">6. Top Queries</a>
+                </li>
+                <li>
+                  <a href="#faq">7. FAQ</a>
                 </li>
                 <li>
                   <button id="show-more-toc" class="show-more">
@@ -2671,19 +3477,19 @@
               <h3 class="sidebar-title">Top Casino Bonuses</h3>
               <ul class="toc">
                 <li class="flex justify-between">
-                  <a href="https://www.smgame777.cc?f=426081" class="text-white">SMgame</a>
+                  <a href="https://www.smgame777.cc?f=426081" class="text-white hover:text-amber-500">SMgame</a>
                   <span class="text-amber-500">100% up to ₱8888+</span>
                 </li>
                 <li class="flex justify-between">
-                  <a href="https://facai88.club/af/GHzNR514/join" class="text-white">MCW Casino</a>
+                  <a href="https://facai88.club/af/GHzNR514/join" class="text-white hover:text-amber-500">MCW Casino</a>
                   <span class="text-amber-500">100% up to ₱38888</span>
                 </li>
                 <li class="flex justify-between">
-                  <a href="https://www.22funph1.com/en-ph?aff=e2994672bd" class="text-white">22Fun</a>
+                  <a href="https://www.22funph1.com/en-ph?aff=e2994672bd" class="text-white hover:text-amber-500">22Fun</a>
                   <span class="text-amber-500">100% up to ₱25000</span>
                 </li>
                 <li class="flex justify-between">
-                  <a href="https://www.oke12bet.xyz/?referral=cc974" class="text-white">OKBET</a>
+                  <a href="https://www.oke12bet.xyz/?referral=cc974" class="text-white hover:text-amber-500">OKBET</a>
                   <span class="text-amber-500">150% + 150 Free Spins</span>
                 </li>
               </ul>
@@ -2693,26 +3499,26 @@
               <h3 class="sidebar-title">Popular Free Demo Slots</h3>
               <ul class="toc">
                 <li class="flex justify-between">
-                  <a href="#popular-slots" class="text-white">Sweet Bonanza</a>
+                  <a href="#popular-slots" class="text-white hover:text-amber-500">Sweet Bonanza</a>
                   <span class="text-green-500">RTP: 96.51%</span>
                 </li>
                 <li class="flex justify-between">
-                  <a href="#popular-slots" class="text-white">Gates of Olympus</a>
+                  <a href="#popular-slots" class="text-white hover:text-amber-500">Gates of Olympus</a>
                   <span class="text-green-500">RTP: 96.50%</span>
                 </li>
                 <li class="flex justify-between">
-                  <a href="#popular-slots" class="text-white">Fortune Tiger</a>
+                  <a href="#popular-slots" class="text-white hover:text-amber-500">Fortune Tiger</a>
                   <span class="text-green-500">RTP: 96.80%</span>
                 </li>
                 <li class="flex justify-between">
-                  <a href="#popular-slots" class="text-white">Wild Bounty</a>
+                  <a href="#popular-slots" class="text-white hover:text-amber-500">Wild Bounty</a>
                   <span class="text-green-500">RTP: 88.12%</span>
                 </li>
               </ul>
             </div>
             
             <div class="mt-8 bg-gray-900 p-4 rounded-lg border border-gray-800">
-              <h3 class="text-xl font-semibold mb-2">🔒 Safe Gambling Tips</h3>
+              <h3 class="text-lg font-semibold mb-2">🔒 Safe Gambling Tips</h3>
               <ul class="text-gray-300 text-sm space-y-2">
                 <li>✓ Set a budget before you start playing</li>
                 <li>✓ Never chase losses or borrow to gamble</li>
@@ -2735,24 +3541,24 @@
           <p>Your trusted guide to online gambling in the Philippines since 2018. We review and compare the best online casinos, slots, and sports betting sites for Filipino players.</p>
           <div class="social-links">
             <a href="https://www.facebook.com/philippinescasinos" aria-label="Facebook">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
               </svg>
             </a>
             <a href="https://twitter.com/PhCasinos" aria-label="Twitter">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path>
               </svg>
             </a>
             <a href="https://www.instagram.com/philippinescasinos" aria-label="Instagram">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
                 <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
                 <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
               </svg>
             </a>
             <a href="https://t.me/+4NOllNOsaCJlODA1" aria-label="Telegram">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M21.5 2l-19 9 5.7 2.8L18.5 6l-8.5 9.5 4.5 3.5z"></path>
               </svg>
             </a>
@@ -2805,29 +3611,59 @@
       const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
       const mobileMenu = document.getElementById('mobile-menu');
       
-      mobileMenuToggle.addEventListener('click', function() {
-        mobileMenu.classList.toggle('active');
-        
-        // Change the icon when menu is open
-        const currentIcon = mobileMenuToggle.innerHTML;
-        if (mobileMenu.classList.contains('active')) {
-          mobileMenuToggle.innerHTML = `
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <line x1="18" y1="6" x2="6" y2="18"></line>
-              <line x1="6" y1="6" x2="18" y2="18"></line>
-            </svg>
-          `;
-        } else {
-          mobileMenuToggle.innerHTML = `
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <line x1="4" x2="20" y1="12" y2="12"></line>
-              <line x1="4" x2="20" y1="6" y2="6"></line>
-              <line x1="4" x2="20" y1="18" y2="18"></line>
-            </svg>
-          `;
-        }
-      });
+      if (mobileMenuToggle && mobileMenu) {
+        mobileMenuToggle.addEventListener('click', function() {
+          mobileMenu.classList.toggle('active');
+          
+          // Change the icon when menu is open
+          if (mobileMenu.classList.contains('active')) {
+            mobileMenuToggle.innerHTML = `
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+              </svg>
+            `;
+          } else {
+            mobileMenuToggle.innerHTML = `
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <line x1="4" x2="20" y1="12" y2="12"></line>
+                <line x1="4" x2="20" y1="6" y2="6"></line>
+                <line x1="4" x2="20" y1="18" y2="18"></line>
+              </svg>
+            `;
+          }
+        });
+      }
       
+      // Sidebar toggle functionality for mobile
+      const sidebarToggle = document.getElementById('sidebar-toggle');
+      const sidebar = document.getElementById('sidebar-content');
+      const sidebarContainer = document.getElementById('sidebar');
+      const sidebarOverlay = document.getElementById('sidebar-overlay');
+      const sidebarClose = document.getElementById('sidebar-close');
+      
+      if (sidebarToggle && sidebar && sidebarOverlay && sidebarClose) {
+        sidebarToggle.addEventListener('click', function() {
+          sidebar.classList.add('active');
+          sidebarContainer.classList.add('active');
+          sidebarOverlay.classList.add('active');
+          document.body.style.overflow = 'hidden'; // Prevent scrolling when sidebar is open
+        });
+        
+        sidebarClose.addEventListener('click', function() {
+          sidebar.classList.remove('active');
+          sidebarContainer.classList.remove('active');
+          sidebarOverlay.classList.remove('active');
+          document.body.style.overflow = ''; // Re-enable scrolling
+        });
+        
+        sidebarOverlay.addEventListener('click', function() {
+          sidebar.classList.remove('active');
+          sidebarContainer.classList.remove('active');
+          sidebarOverlay.classList.remove('active');
+          document.body.style.overflow = ''; // Re-enable scrolling
+        });
+      }
       
       // FAQ toggle functionality
       const faqQuestions = document.querySelectorAll('.faq-question');
@@ -2839,15 +3675,15 @@
           
           // Toggle the active class
           answer.classList.toggle('active');
-          icon.classList.toggle('active');
+          if (icon) icon.classList.toggle('active');
           
           // Close other FAQs
           faqQuestions.forEach(otherQuestion => {
             if (otherQuestion !== question) {
               const otherAnswer = otherQuestion.nextElementSibling;
               const otherIcon = otherQuestion.querySelector('.faq-icon');
-              otherAnswer.classList.remove('active');
-              otherIcon.classList.remove('active');
+              if (otherAnswer) otherAnswer.classList.remove('active');
+              if (otherIcon) otherIcon.classList.remove('active');
             }
           });
         });
@@ -2855,24 +3691,34 @@
       
       // Show More TOC functionality
       const showMoreToc = document.getElementById('show-more-toc');
-      let isExpanded = false;
+      const tocList = document.querySelector('.toc');
       
-      showMoreToc.addEventListener('click', () => {
-        isExpanded = !isExpanded;
-        showMoreToc.innerHTML = isExpanded ? 
-          '<span>-</span> Show Less' : 
-          '<span>+</span> Show More';
+      if (showMoreToc && tocList) {
+        let isExpanded = false;
+        
+        showMoreToc.addEventListener('click', () => {
+          isExpanded = !isExpanded;
+          showMoreToc.innerHTML = isExpanded ? 
+            '<span>-</span> Show Less' : 
+            '<span>+</span> Show More';
+            
+          tocList.classList.toggle('toc-expanded');
           
-        // Here you would add code to show/hide additional TOC items
-        const hiddenItems = document.querySelectorAll('.toc-hidden');
-        hiddenItems.forEach(item => {
-          item.style.display = isExpanded ? 'block' : 'none';
+          // Show/hide additional TOC items
+          const hiddenItems = document.querySelectorAll('.toc-hidden');
+          hiddenItems.forEach(item => {
+            item.style.display = isExpanded ? 'block' : 'none';
+          });
         });
-      });
+      }
       
       // Animated bonus counter functionality
       const animateBonusCounter = (element, targetValue) => {
+        if (!element) return;
+        
         const counterElement = element.querySelector('.counter');
+        if (!counterElement) return;
+        
         const startValue = 0;
         const duration = 2000; // 2 seconds
         const steps = 60;
@@ -2911,24 +3757,34 @@
           { id: 'bonus-counter-4', value: 20000 }
         ];
         
-        const observer = new IntersectionObserver((entries) => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              const bonusCounter = bonusCounters.find(counter => counter.id === entry.target.id);
-              if (bonusCounter) {
-                animateBonusCounter(entry.target, bonusCounter.value);
-                observer.unobserve(entry.target); // Only animate once
+        if ('IntersectionObserver' in window) {
+          const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                const bonusCounter = bonusCounters.find(counter => counter.id === entry.target.id);
+                if (bonusCounter) {
+                  animateBonusCounter(entry.target, bonusCounter.value);
+                  observer.unobserve(entry.target); // Only animate once
+                }
               }
+            });
+          }, { threshold: 0.5 });
+          
+          bonusCounters.forEach(counter => {
+            const element = document.getElementById(counter.id);
+            if (element) {
+              observer.observe(element);
             }
           });
-        }, { threshold: 0.5 });
-        
-        bonusCounters.forEach(counter => {
-          const element = document.getElementById(counter.id);
-          if (element) {
-            observer.observe(element);
-          }
-        });
+        } else {
+          // Fallback for browsers that don't support IntersectionObserver
+          bonusCounters.forEach(counter => {
+            const element = document.getElementById(counter.id);
+            if (element) {
+              animateBonusCounter(element, counter.value);
+            }
+          });
+        }
       };
       
       // Lazy load images
@@ -2950,6 +3806,13 @@
         lazyImages.forEach(img => {
           imageObserver.observe(img);
         });
+      } else {
+        // Fallback for browsers that don't support IntersectionObserver
+        lazyImages.forEach(img => {
+          if (img.dataset.src) {
+            img.src = img.dataset.src;
+          }
+        });
       }
       
       // Initialize bonus counters
@@ -2964,6 +3827,29 @@
           const targetElement = document.querySelector(targetId);
           
           if (targetElement) {
+            // Close mobile menu if open
+            if (mobileMenu && mobileMenu.classList.contains('active')) {
+              mobileMenu.classList.remove('active');
+              if (mobileMenuToggle) {
+                mobileMenuToggle.innerHTML = `
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <line x1="4" x2="20" y1="12" y2="12"></line>
+                    <line x1="4" x2="20" y1="6" y2="6"></line>
+                    <line x1="4" x2="20" y1="18" y2="18"></line>
+                  </svg>
+                `;
+              }
+            }
+            
+            // Close sidebar if open on mobile
+            if (sidebar && sidebar.classList.contains('active')) {
+              sidebar.classList.remove('active');
+              sidebarContainer.classList.remove('active');
+              sidebarOverlay.classList.remove('active');
+              document.body.style.overflow = '';
+            }
+            
+            // Smooth scroll to target
             targetElement.scrollIntoView({
               behavior: 'smooth',
               block: 'start'
@@ -2971,7 +3857,34 @@
           }
         });
       });
+      
+      // Fix for touch devices
+      if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
+        document.body.classList.add('touch-device');
+      }
+      
+      // Responsive sidebar handling
+      function adjustSidebar() {
+        if (window.innerWidth >= 1024) {
+          // On desktop, make sure sidebar is visible and positioned correctly
+          if (sidebar) {
+            sidebar.classList.remove('active');
+          }
+          if (sidebarContainer) {
+            sidebarContainer.classList.remove('active');
+          }
+          if (sidebarOverlay) {
+            sidebarOverlay.classList.remove('active');
+          }
+          document.body.style.overflow = '';
+        }
+      }
+      
+      // Run on load and resize
+      adjustSidebar();
+      window.addEventListener('resize', adjustSidebar);
     });
   </script>
 </body>
 </html>
+
