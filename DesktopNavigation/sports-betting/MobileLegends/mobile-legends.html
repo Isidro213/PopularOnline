@@ -1,0 +1,1082 @@
+<!DOCTYPE html>
+<html lang="en-PH">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Mobile Legends Betting Philippines | Best ML Betting Sites</title>
+  <meta name="description" content="Find the best Mobile Legends betting sites in the Philippines. Bet on MPL Philippines, M-Series, and other ML tournaments with GCash. Get exclusive bonuses and competitive odds.">
+  
+  <style>
+    /* Base styles */
+    :root {
+      --color-black: #000000;
+      --color-white: #ffffff;
+      --color-gray-800: #1f2937;
+      --color-gray-900: #111827;
+      --color-gray-950: #0a0f1a;
+      --color-gray-300: #d1d5db;
+      --color-gray-400: #9ca3af;
+      --color-amber-500: #f59e0b;
+      --color-blue-400: #60a5fa;
+      --color-green-500: #10b981;
+      --color-orange-500: #f97316;
+      --color-orange-600: #ea580c;
+      --color-red-600: #dc2626;
+      --color-purple-500: #8b5cf6;
+      --color-purple-600: #7c3aed;
+      --color-blue-500: #3b82f6;
+      --color-blue-600: #2563eb;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      background-color: var(--color-black);
+      color: var(--color-white);
+      line-height: 1.5;
+      position: relative;
+      overflow-x: hidden; /* Prevent horizontal scrolling */
+      padding: 20px;
+    }
+    
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+    
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+    
+    /* Layout */
+    .container {
+      width: 100%;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+    
+    .back-button {
+      display: inline-flex;
+      align-items: center;
+      background-color: var(--color-gray-900);
+      color: var(--color-white);
+      padding: 0.5rem 1rem;
+      border-radius: 0.25rem;
+      margin-bottom: 1.5rem;
+      transition: background-color 0.2s, transform 0.2s;
+      border: 1px solid var(--color-gray-800);
+    }
+    
+    .back-button:hover {
+      background-color: var(--color-gray-800);
+      transform: translateY(-2px);
+    }
+    
+    .back-button svg {
+      margin-right: 0.5rem;
+    }
+    
+    .page-title {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: var(--color-white);
+    }
+    
+    .subtitle {
+      font-size: 1.25rem;
+      color: var(--color-gray-300);
+      margin-bottom: 2rem;
+    }
+    
+    .section {
+      margin-bottom: 2.5rem;
+      background-color: var(--color-gray-950);
+      border-radius: 0.5rem;
+      padding: 1.5rem;
+      border: 1px solid var(--color-gray-800);
+    }
+    
+    .section-title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: var(--color-amber-500);
+    }
+    
+    .text-content {
+      color: var(--color-gray-300);
+      margin-bottom: 1rem;
+    }
+    
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 1rem;
+    }
+    
+    @media (min-width: 640px) {
+      .grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    
+    @media (min-width: 768px) {
+      .grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    
+    .card {
+      background-color: var(--color-gray-900);
+      border-radius: 0.5rem;
+      padding: 1.25rem;
+      border: 1px solid var(--color-gray-800);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+    }
+    
+    .card-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+    
+    .card-content {
+      color: var(--color-gray-300);
+      font-size: 0.875rem;
+    }
+    
+    .team-logo {
+      width: 80px;
+      height: 80px;
+      object-fit: contain;
+      margin: 0 auto 1rem;
+      border-radius: 0.5rem;
+    }
+    
+    .betting-site {
+      display: flex;
+      align-items: center;
+      background-color: var(--color-gray-900);
+      border-radius: 0.5rem;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      border: 1px solid var(--color-gray-800);
+      transition: transform 0.3s;
+    }
+    
+    .betting-site:hover {
+      transform: translateY(-3px);
+    }
+    
+    .site-logo {
+      width: 100px;
+      height: 100px;
+      object-fit: contain;
+      margin-right: 1rem;
+      border-radius: 0.25rem;
+      border: 1px solid var(--color-gray-800);
+    }
+    
+    .site-details {
+      flex: 1;
+    }
+    
+    .site-name {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+    }
+    
+    .site-bonus {
+      color: var(--color-amber-500);
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+    
+    .site-features {
+      list-style: none;
+      margin-bottom: 0.5rem;
+    }
+    
+    .site-features li {
+      display: flex;
+      align-items: center;
+      font-size: 0.875rem;
+      margin-bottom: 0.25rem;
+      color: var(--color-gray-300);
+    }
+    
+    .site-features li::before {
+      content: "✓";
+      color: var(--color-green-500);
+      margin-right: 0.5rem;
+    }
+    
+    .bet-button {
+      display: inline-block;
+      background-color: var(--color-blue-500);
+      color: var(--color-white);
+      padding: 0.5rem 1rem;
+      border-radius: 0.25rem;
+      font-weight: 600;
+      transition: background-color 0.2s, transform 0.2s;
+    }
+    
+    .bet-button:hover {
+      background-color: var(--color-blue-600);
+      transform: translateY(-2px);
+    }
+    
+    .bet-types {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+    
+    @media (min-width: 768px) {
+      .bet-types {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    
+    .bet-type {
+      background-color: var(--color-gray-900);
+      border-radius: 0.5rem;
+      padding: 1rem;
+      border: 1px solid var(--color-gray-800);
+    }
+    
+    .bet-type-title {
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: var(--color-amber-500);
+    }
+    
+    .bet-type-desc {
+      font-size: 0.875rem;
+      color: var(--color-gray-300);
+    }
+    
+    .cta-box {
+      background: linear-gradient(to right, var(--color-gray-900), var(--color-gray-950));
+      border-radius: 0.5rem;
+      padding: 1.5rem;
+      text-align: center;
+      margin-top: 2rem;
+      border: 1px solid var(--color-gray-800);
+    }
+    
+    .cta-title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+    
+    .cta-text {
+      color: var(--color-gray-300);
+      margin-bottom: 1.5rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .cta-button {
+      display: inline-block;
+      background-color: var(--color-blue-500);
+      color: var(--color-white);
+      padding: 0.75rem 1.5rem;
+      border-radius: 0.25rem;
+      font-weight: 600;
+      transition: background-color 0.2s, transform 0.2s;
+    }
+    
+    .cta-button:hover {
+      background-color: var(--color-blue-600);
+      transform: translateY(-2px);
+    }
+    
+    .image-container {
+      margin: 1.5rem 0;
+      border-radius: 0.5rem;
+      overflow: hidden;
+    }
+    
+    .image-container img {
+      width: 100%;
+      height: auto;
+      border-radius: 0.5rem;
+    }
+    
+    .steps-container {
+      margin-top: 1.5rem;
+    }
+    
+    .step {
+      display: flex;
+      margin-bottom: 1rem;
+      background-color: var(--color-gray-900);
+      border-radius: 0.5rem;
+      padding: 1rem;
+      border: 1px solid var(--color-gray-800);
+    }
+    
+    .step-number {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 30px;
+      height: 30px;
+      background-color: var(--color-blue-500);
+      color: var(--color-white);
+      border-radius: 50%;
+      margin-right: 1rem;
+      font-weight: bold;
+      flex-shrink: 0;
+    }
+    
+    .step-content {
+      flex: 1;
+    }
+    
+    .step-title {
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+    }
+    
+    .step-desc {
+      font-size: 0.875rem;
+      color: var(--color-gray-300);
+    }
+    
+    .two-columns {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    
+    @media (min-width: 768px) {
+      .two-columns {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    
+    .tournament-card {
+      display: flex;
+      flex-direction: column;
+      background-color: var(--color-gray-900);
+      border-radius: 0.5rem;
+      padding: 1.25rem;
+      border: 1px solid var(--color-gray-800);
+      transition: transform 0.3s, box-shadow 0.3s;
+      height: 100%;
+    }
+    
+    .tournament-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+    }
+    
+    .tournament-logo {
+      width: 100px;
+      height: 100px;
+      object-fit: contain;
+      margin: 0 auto 1rem;
+    }
+    
+    .tournament-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      text-align: center;
+    }
+    
+    .tournament-details {
+      font-size: 0.875rem;
+      color: var(--color-gray-300);
+      margin-bottom: 0.5rem;
+    }
+    
+    .tournament-prize {
+      color: var(--color-amber-500);
+      font-weight: 600;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    
+    .hero-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.5rem;
+    }
+    
+    @media (min-width: 640px) {
+      .hero-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+    
+    @media (min-width: 768px) {
+      .hero-grid {
+        grid-template-columns: repeat(6, 1fr);
+      }
+    }
+    
+    .hero-card {
+      background-color: var(--color-gray-900);
+      border-radius: 0.5rem;
+      padding: 0.75rem;
+      border: 1px solid var(--color-gray-800);
+      text-align: center;
+      transition: transform 0.3s;
+    }
+    
+    .hero-card:hover {
+      transform: translateY(-3px);
+    }
+    
+    .hero-image {
+      width: 50px;
+      height: 50px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin: 0 auto 0.5rem;
+    }
+    
+    .hero-name {
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+    
+    .hero-role {
+      font-size: 0.625rem;
+      color: var(--color-gray-400);
+    }
+    
+    .table-container {
+      overflow-x: auto;
+      margin: 1.5rem 0;
+    }
+    
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    
+    th, td {
+      padding: 0.75rem;
+      text-align: left;
+      border-bottom: 1px solid var(--color-gray-800);
+    }
+    
+    th {
+      background-color: var(--color-gray-900);
+      font-weight: 600;
+      color: var(--color-white);
+    }
+    
+    tr:hover {
+      background-color: var(--color-gray-900);
+    }
+    
+    @media (max-width: 640px) {
+      .page-title {
+        font-size: 1.5rem;
+      }
+      
+      .subtitle {
+        font-size: 1rem;
+      }
+      
+      .section-title {
+        font-size: 1.25rem;
+      }
+      
+      .betting-site {
+        flex-direction: column;
+        text-align: center;
+      }
+      
+      .site-logo {
+        margin-right: 0;
+        margin-bottom: 1rem;
+      }
+      
+      .bet-types {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Back Button -->
+    <a href="index.html" class="back-button">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M19 12H5"></path>
+        <path d="M12 19l-7-7 7-7"></path>
+      </svg>
+      Home
+    </a>
+    
+    <!-- Page Title -->
+    <h1 class="page-title">Mobile Legends Betting in the Philippines</h1>
+    <p class="subtitle">Your guide to the best Mobile Legends betting sites, tournaments, and strategies for Filipino players</p>
+    
+    <!-- Introduction Section -->
+    <div class="section">
+      <h2 class="section-title">What is Mobile Legends Betting?</h2>
+      <p class="text-content">
+        Mobile Legends: Bang Bang (MLBB) is one of the most popular mobile games in the Philippines, with millions of active players and a thriving professional scene. Mobile Legends betting allows you to place wagers on professional MLBB matches and tournaments, adding excitement to the viewing experience.
+      </p>
+      <p class="text-content">
+        The Philippines has a passionate Mobile Legends community, with the MPL Philippines (Mobile Legends Professional League) being one of the most-watched esports competitions in the country. Filipino teams have also achieved international success in tournaments like the M-Series World Championships.
+      </p>
+      <div class="image-container">
+        <img src="https://placeholder.svg?height=300&width=700" alt="Mobile Legends Tournament" loading="lazy">
+      </div>
+      <p class="text-content">
+        Our comprehensive guide covers everything you need to know about Mobile Legends betting in the Philippines, including the best betting sites, popular tournaments, betting markets, and strategies to improve your chances of winning.
+      </p>
+    </div>
+    
+    <!-- Major Mobile Legends Tournaments -->
+    <div class="section">
+      <h2 class="section-title">Major Mobile Legends Tournaments to Bet On</h2>
+      <p class="text-content">
+        These prestigious tournaments attract the most betting action from Filipino Mobile Legends fans:
+      </p>
+      
+      <div class="grid">
+        <!-- MPL Philippines -->
+        <div class="tournament-card">
+          <img src="https://placeholder.svg?height=100&width=100" alt="MPL Philippines Logo" class="tournament-logo">
+          <h3 class="tournament-title">MPL Philippines</h3>
+          <p class="tournament-prize">Prize Pool: ₱4,000,000+</p>
+          <p class="tournament-details">
+            The premier Mobile Legends professional league in the Philippines featuring 8 teams competing over a regular season and playoffs. Held twice a year (Seasons).
+          </p>
+        </div>
+        
+        <!-- M-Series World Championship -->
+        <div class="tournament-card">
+          <img src="https://placeholder.svg?height=100&width=100" alt="M-Series World Championship Logo" class="tournament-logo">
+          <h3 class="tournament-title">M-Series World Championship</h3>
+          <p class="tournament-prize">Prize Pool: $800,000+</p>
+          <p class="tournament-details">
+            The annual world championship for Mobile Legends where the best teams from each region compete. Filipino teams like Blacklist International and ECHO have won this prestigious tournament.
+          </p>
+        </div>
+        
+        <!-- MSC (MLBB Southeast Asia Cup) -->
+        <div class="tournament-card">
+          <img src="https://placeholder.svg?height=100&width=100" alt="MSC Logo" class="tournament-logo">
+          <h3 class="tournament-title">MSC (Southeast Asia Cup)</h3>
+          <p class="tournament-prize">Prize Pool: $300,000+</p>
+          <p class="tournament-details">
+            A regional tournament featuring the top teams from Southeast Asian countries, including the Philippines, Indonesia, Malaysia, and Singapore.
+          </p>
+        </div>
+        
+        <!-- MPL Invitational -->
+        <div class="tournament-card">
+          <img src="https://placeholder.svg?height=100&width=100" alt="MPL Invitational Logo" class="tournament-logo">
+          <h3 class="tournament-title">MPL Invitational</h3>
+          <p class="tournament-prize">Prize Pool: $100,000+</p>
+          <p class="tournament-details">
+            An invitational tournament featuring top teams from different MPL regions competing against each other.
+          </p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Top Filipino Mobile Legends Teams -->
+    <div class="section">
+      <h2 class="section-title">Top Filipino Mobile Legends Teams</h2>
+      <p class="text-content">
+        When betting on Mobile Legends, it's important to know the top teams in the Philippines:
+      </p>
+      
+      <div class="grid">
+        <!-- Blacklist International -->
+        <div class="card">
+          <img src="https://placeholder.svg?height=80&width=80" alt="Blacklist International Logo" class="team-logo">
+          <h3 class="card-title">Blacklist International</h3>
+          <p class="card-content">
+            Two-time M-Series World Champions (M3 and M5) and multiple MPL Philippines champions. Known for their "UBE" strategy (Ultimate Bonding Experience) and methodical playstyle.
+          </p>
+        </div>
+        
+        <!-- ECHO -->
+        <div class="card">
+          <img src="https://placeholder.svg?height=80&width=80" alt="ECHO Logo" class="team-logo">
+          <h3 class="card-title">ECHO</h3>
+          <p class="card-content">
+            M4 World Champions and MPL Philippines champions. Known for their aggressive playstyle and star-studded roster featuring players like KarlTzy and Yawi.
+          </p>
+        </div>
+        
+        <!-- AP Bren -->
+        <div class="card">
+          <img src="https://placeholder.svg?height=80&width=80" alt="AP Bren Logo" class="team-logo">
+          <h3 class="card-title">AP Bren</h3>
+          <p class="card-content">
+            M2 World Champions and multiple MPL Philippines champions. Known for their adaptability and strong team coordination.
+          </p>
+        </div>
+        
+        <!-- ONIC Philippines -->
+        <div class="card">
+          <img src="https://placeholder.svg?height=80&width=80" alt="ONIC Philippines Logo" class="team-logo">
+          <h3 class="card-title">ONIC Philippines</h3>
+          <p class="card-content">
+            Multiple MPL Philippines finalists and international tournament contenders. Known for their innovative drafts and strong macro play.
+          </p>
+        </div>
+        
+        <!-- RSG Philippines -->
+        <div class="card">
+          <img src="https://placeholder.svg?height=80&width=80" alt="RSG Philippines Logo" class="team-logo">
+          <h3 class="card-title">RSG Philippines</h3>
+          <p class="card-content">
+            MPL Philippines champions and MSC contenders. Known for their disciplined playstyle and strategic approach to the game.
+          </p>
+        </div>
+        
+        <!-- TNC Pro Team -->
+        <div class="card">
+          <img src="https://placeholder.svg?height=80&width=80" alt="TNC Pro Team Logo" class="team-logo">
+          <h3 class="card-title">TNC Pro Team</h3>
+          <p class="card-content">
+            A strong contender in MPL Philippines with a history of competitive performances. Known for their aggressive playstyle and mechanical skill.
+          </p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Top Mobile Legends Betting Sites -->
+    <div class="section">
+      <h2 class="section-title">Top Mobile Legends Betting Sites in the Philippines</h2>
+      <p class="text-content">
+        These online betting sites offer the best Mobile Legends betting experience for Filipino players, with extensive coverage, competitive odds, and secure payment options:
+      </p>
+      
+      <!-- Betting Site 1 -->
+      <div class="betting-site">
+        <img src="Game-icon/SmGame.jpg" alt="Smgame Logo" class="site-logo">
+        <div class="site-details">
+          <h3 class="site-name">Smgame</h3>
+          <p class="site-bonus">Welcome Bonus: 100% up to ₱8,888</p>
+          <ul class="site-features">
+            <li>Comprehensive MPL Philippines coverage</li>
+            <li>Live betting with competitive odds</li>
+            <li>GCash and PayMaya accepted</li>
+            <li>Mobile-friendly platform</li>
+          </ul>
+          <a href="https://www.smgame777.cc?f=426081" class="bet-button" rel="noreferrer nofollow noopener" target="_blank">Bet Now</a>
+        </div>
+      </div>
+      
+      <!-- Betting Site 2 -->
+      <div class="betting-site">
+        <img src="Game-icon/mcw-casino.jpg" alt="MCW Casino Logo" class="site-logo">
+        <div class="site-details">
+          <h3 class="site-name">MCW Casino</h3>
+          <p class="site-bonus">Esports Bonus: 100% up to ₱38,888</p>
+          <ul class="site-features">
+            <li>Live streaming of MPL matches</li>
+            <li>Extensive Mobile Legends betting markets</li>
+            <li>Fast withdrawals via GCash</li>
+            <li>Regular Mobile Legends promotions</li>
+          </ul>
+          <a href="https://facai88.club/af/GHzNR514/join" class="bet-button" rel="noreferrer nofollow noopener" target="_blank">Bet Now</a>
+        </div>
+      </div>
+      
+      <!-- Betting Site 3 -->
+      <div class="betting-site">
+        <img src="Game-icon/22Fun.webp" alt="22Fun Logo" class="site-logo">
+        <div class="site-details">
+          <h3 class="site-name">22Fun</h3>
+          <p class="site-bonus">Mobile Legends Bonus: 100% up to ₱25,000</p>
+          <ul class="site-features">
+            <li>PAGCOR licensed platform</li>
+            <li>Excellent Mobile Legends betting options</li>
+            <li>Filipino customer support</li>
+            <li>Secure payment methods</li>
+          </ul>
+          <a href="https://www.22funph1.com/en-ph?aff=e2994672bd" class="bet-button" rel="noreferrer nofollow noopener" target="_blank">Bet Now</a>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Mobile Legends Betting Markets -->
+    <div class="section">
+      <h2 class="section-title">Popular Mobile Legends Betting Markets</h2>
+      <p class="text-content">
+        Mobile Legends offers a wide variety of betting options. Here are the most popular types of Mobile Legends bets available to Filipino players:
+      </p>
+      
+      <div class="bet-types">
+        <!-- Match Winner -->
+        <div class="bet-type">
+          <h3 class="bet-type-title">Match Winner</h3>
+          <p class="bet-type-desc">
+            The simplest form of Mobile Legends betting where you pick which team will win the match. Also known as moneyline betting.
+          </p>
+        </div>
+        
+        <!-- Handicap -->
+        <div class="bet-type">
+          <h3 class="bet-type-title">Handicap</h3>
+          <p class="bet-type-desc">
+            One team is given a virtual advantage or disadvantage to balance the odds. Popular for matches with clear favorites.
+          </p>
+        </div>
+        
+        <!-- Total Maps -->
+        <div class="bet-type">
+          <h3 class="bet-type-title">Total Maps</h3>
+          <p class="bet-type-desc">
+            Betting on whether the total number of games played in a series will be over or under a specified number (typically in best-of-3 or best-of-5 series).
+          </p>
+        </div>
+        
+        <!-- First Blood -->
+        <div class="bet-type">
+          <h3 class="bet-type-title">First Blood</h3>
+          <p class="bet-type-desc">
+            Betting on which team will get the first kill in a match. A popular market for Mobile Legends due to the importance of early game advantages.
+          </p>
+        </div>
+        
+        <!-- First to X Kills -->
+        <div class="bet-type">
+          <h3 class="bet-type-title">First to X Kills</h3>
+          <p class="bet-type-desc">
+            Betting on which team will be the first to reach a certain number of kills (e.g., first to 10 kills).
+          </p>
+        </div>
+        
+        <!-- First Tower -->
+        <div class="bet-type">
+          <h3 class="bet-type-title">First Tower</h3>
+          <p class="bet-type-desc">
+            Betting on which team will destroy the first tower in the match. Towers provide gold and map control, making this a strategic betting market.
+          </p>
+        </div>
+        
+        <!-- First Turtle/Lord -->
+        <div class="bet-type">
+          <h3 class="bet-type-title">First Turtle/Lord</h3>
+          <p class="bet-type-desc">
+            Betting on which team will secure the first Turtle or Lord objective. These objectives provide significant advantages in Mobile Legends.
+          </p>
+        </div>
+        
+        <!-- Total Kills Over/Under -->
+        <div class="bet-type">
+          <h3 class="bet-type-title">Total Kills Over/Under</h3>
+          <p class="bet-type-desc">
+            Betting on whether the total number of kills in the match will be over or under a specified number. This market is influenced by team playstyles (aggressive vs. passive).
+          </p>
+        </div>
+        
+        <!-- Match Duration -->
+        <div class="bet-type">
+          <h3 class="bet-type-title">Match Duration</h3>
+          <p class="bet-type-desc">
+            Betting on how long the match will last, typically in minutes. Mobile Legends matches can range from quick 12-minute stomps to 30+ minute back-and-forth battles.
+          </p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Mobile Legends Heroes and Meta -->
+    <div class="section">
+      <h2 class="section-title">Understanding Mobile Legends Heroes and Meta</h2>
+      <p class="text-content">
+        To bet successfully on Mobile Legends, it's crucial to understand the current meta and popular heroes. The meta changes with each patch, affecting which heroes are considered strong or weak.
+      </p>
+      
+      <h3 class="card-title mt-4">Popular Hero Roles in Mobile Legends:</h3>
+      
+      <div class="hero-grid">
+        <!-- Tank -->
+        <div class="hero-card">
+          <img src="https://placeholder.svg?height=50&width=50" alt="Tank Role" class="hero-image">
+          <h4 class="hero-name">Tank</h4>
+          <p class="hero-role">Frontline</p>
+        </div>
+        
+        <!-- Fighter -->
+        <div class="hero-card">
+          <img src="https://placeholder.svg?height=50&width=50" alt="Fighter Role" class="hero-image">
+          <h4 class="hero-name">Fighter</h4>
+          <p class="hero-role">Exp Lane</p>
+        </div>
+        
+        <!-- Assassin -->
+        <div class="hero-card">
+          <img src="https://placeholder.svg?height=50&width=50" alt="Assassin Role" class="hero-image">
+          <h4 class="hero-name">Assassin</h4>
+          <p class="hero-role">Jungler</p>
+        </div>
+        
+        <!-- Mage -->
+        <div class="hero-card">
+          <img src="https://placeholder.svg?height=50&width=50" alt="Mage Role" class="hero-image">
+          <h4 class="hero-name">Mage</h4>
+          <p class="hero-role">Mid Lane</p>
+        </div>
+        
+        <!-- Marksman -->
+        <div class="hero-card">
+          <img src="https://placeholder.svg?height=50&width=50" alt="Marksman Role" class="hero-image">
+          <h4 class="hero-name">Marksman</h4>
+          <p class="hero-role">Gold Lane</p>
+        </div>
+        
+        <!-- Support -->
+        <div class="hero-card">
+          <img src="https://placeholder.svg?height=50&width=50" alt="Support Role" class="hero-image">
+          <h4 class="hero-name">Support</h4>
+          <p class="hero-role">Roamer</p>
+        </div>
+      </div>
+      
+      <p class="text-content mt-4">
+        The draft phase is crucial in professional Mobile Legends matches. Teams ban heroes that are either overpowered in the current meta or counter their preferred strategies. Understanding the draft can give you valuable insights for betting.
+      </p>
+      
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Factor</th>
+              <th>Betting Implication</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Team secures multiple S-tier heroes</td>
+              <td>Higher chance of winning, consider betting on this team</td>
+            </tr>
+            <tr>
+              <td>Team has comfort picks for all players</td>
+              <td>Players perform better on familiar heroes, favorable betting opportunity</td>
+            </tr>
+            <tr>
+              <td>Team has strong synergy in their draft</td>
+              <td>Heroes that work well together increase win probability</td>
+            </tr>
+            <tr>
+              <td>Team has counter picks to opponent's key heroes</td>
+              <td>Counter picks can neutralize opponent's strategy, good betting angle</td>
+            </tr>
+            <tr>
+              <td>Team has a balanced composition (damage types, CC, etc.)</td>
+              <td>Balanced teams are more adaptable, safer betting option</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    
+    <!-- Mobile Legends Betting Tips -->
+    <div class="section">
+      <h2 class="section-title">Mobile Legends Betting Tips for Filipino Players</h2>
+      
+      <div class="two-columns">
+        <div>
+          <p class="text-content">
+            Improve your chances of winning with these Mobile Legends betting strategies:
+          </p>
+          
+          <ul class="text-content" style="list-style-position: inside; padding-left: 1rem;">
+            <li><strong>Study team playstyles</strong> - Some teams prefer aggressive early game strategies, while others excel in late game teamfights.</li>
+            <li><strong>Follow the meta</strong> - Stay updated on patch changes and how they affect hero viability and team strategies.</li>
+            <li><strong>Research head-to-head records</strong> - Some teams consistently perform well against specific opponents regardless of form.</li>
+            <li><strong>Consider player specialties</strong> - Many pro players have signature heroes they excel with. Watch for these in the draft.</li>
+            <li><strong>Analyze the draft phase</strong> - The hero draft often determines the outcome before the match even begins.</li>
+            <li><strong>Watch for roster changes</strong> - Team performance can change dramatically with new players or substitutions.</li>
+            <li><strong>Consider tournament context</strong> - Teams may perform differently in regular season matches versus playoffs or international tournaments.</li>
+            <li><strong>Look for value bets</strong> - Sometimes the odds don't accurately reflect the true probabilities, creating betting opportunities.</li>
+          </ul>
+        </div>
+        
+        <div class="image-container">
+          <img src="https://placeholder.svg?height=400&width=400" alt="Mobile Legends Tournament" loading="lazy">
+        </div>
+      </div>
+    </div>
+    
+    <!-- How to Bet on Mobile Legends -->
+    <div class="section">
+      <h2 class="section-title">How to Bet on Mobile Legends in the Philippines</h2>
+      <p class="text-content">
+        Getting started with Mobile Legends betting is easy. Follow these simple steps:
+      </p>
+      
+      <div class="steps-container">
+        <!-- Step 1 -->
+        <div class="step">
+          <div class="step-number">1</div>
+          <div class="step-content">
+            <h3 class="step-title">Choose a Mobile Legends Betting Site</h3>
+            <p class="step-desc">
+              Select one of our recommended betting platforms that offers good coverage of MPL Philippines and other Mobile Legends tournaments.
+            </p>
+          </div>
+        </div>
+        
+        <!-- Step 2 -->
+        <div class="step">
+          <div class="step-number">2</div>
+          <div class="step-content">
+            <h3 class="step-title">Create an Account</h3>
+            <p class="step-desc">
+              Register by providing your basic information. The process typically takes less than 5 minutes to complete.
+            </p>
+          </div>
+        </div>
+        
+        <!-- Step 3 -->
+        <div class="step">
+          <div class="step-number">3</div>
+          <div class="step-content">
+            <h3 class="step-title">Deposit Funds</h3>
+            <p class="step-desc">
+              Add money to your account using GCash, PayMaya, or other available payment methods. Most sites have a minimum deposit of ₱100-₱500.
+            </p>
+          </div>
+        </div>
+        
+        <!-- Step 4 -->
+        <div class="step">
+          <div class="step-number">4</div>
+          <div class="step-content">
+            <h3 class="step-title">Browse Mobile Legends Matches</h3>
+            <p class="step-desc">
+              Navigate to the esports or Mobile Legends section and explore the upcoming and live matches for MPL Philippines and other tournaments.
+            </p>
+          </div>
+        </div>
+        
+        <!-- Step 5 -->
+        <div class="step">
+          <div class="step-number">5</div>
+          <div class="step-content">
+            <h3 class="step-title">Place Your Bet</h3>
+            <p class="step-desc">
+              Select the match and betting market you want to wager on, enter your stake amount, and confirm your bet.
+            </p>
+          </div>
+        </div>
+        
+        <!-- Step 6 -->
+        <div class="step">
+          <div class="step-number">6</div>
+          <div class="step-content">
+            <h3 class="step-title">Watch the Match</h3>
+            <p class="step-desc">
+              Many betting sites offer live streaming of Mobile Legends matches. Alternatively, you can watch on the official MPL Philippines Facebook page or YouTube channel.
+            </p>
+          </div>
+        </div>
+        
+        <!-- Step 7 -->
+        <div class="step">
+          <div class="step-number">7</div>
+          <div class="step-content">
+            <h3 class="step-title">Collect Your Winnings</h3>
+            <p class="step-desc">
+              If your bet wins, your account will be credited automatically. You can then withdraw your winnings or use them for future bets.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Responsible Gambling -->
+    <div class="section">
+      <h2 class="section-title">Responsible Mobile Legends Betting</h2>
+      <p class="text-content">
+        While Mobile Legends betting can be entertaining, it's important to gamble responsibly:
+      </p>
+      
+      <div class="grid">
+        <!-- Set Limits -->
+        <div class="card">
+          <div class="card-icon">⏱️</div>
+          <h3 class="card-title">Set Time Limits</h3>
+          <p class="card-content">
+            Decide how much time you'll spend betting on Mobile Legends and stick to it. Don't let it interfere with your daily responsibilities.
+          </p>
+        </div>
+        
+        <!-- Budget -->
+        <div class="card">
+          <div class="card-icon">💵</div>
+          <h3 class="card-title">Establish a Budget</h3>
+          <p class="card-content">
+            Only bet with money you can afford to lose. Set a daily, weekly, or monthly budget and never exceed it.
+          </p>
+        </div>
+        
+        <!-- Don't Chase Losses -->
+        <div class="card">
+          <div class="card-icon">🚫</div>
+          <h3 class="card-title">Don't Chase Losses</h3>
+          <p class="card-content">
+            Accept that losing is part of gambling. Never try to recover losses by increasing your bets or borrowing money.
+          </p>
+        </div>
+        
+        <!-- Take Breaks -->
+        <div class="card">
+          <div class="card-icon">🏖️</div>
+          <h3 class="card-title">Take Regular Breaks</h3>
+          <p class="card-content">
+            Step away from betting regularly to maintain perspective and prevent gambling from becoming a compulsion.
+          </p>
+        </div>
+        
+        <!-- Seek Help -->
+        <div class="card">
+          <div class="card-icon">🆘</div>
+          <h3 class="card-title">Seek Help If Needed</h3>
+          <p class="card-content">
+            If you feel your gambling habits are becoming problematic, don't hesitate to seek professional help or support.
+          </p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- CTA Box -->
+    <div class="cta-box">
+      <h2 class="cta-title">Ready to Bet on Mobile Legends?</h2>
+      <p class="cta-text">
+        Join thousands of Filipino Mobile Legends fans who are enjoying the excitement of online betting. Sign up today to claim your welcome bonus and start betting on MPL Philippines and other tournaments.
+      </p>
+      <a href="https://www.smgame777.cc?f=426081" class="cta-button" rel="noreferrer nofollow noopener" target="_blank">
+        Get Started Now
+      </a>
+    </div>
+  </div>
+</body>
+</html>
+

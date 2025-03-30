@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en-PH">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Basketball Betting Philippines | Best Basketball Betting Sites</title>
+  <meta name="description" content="Find the best basketball betting sites in the Philippines. Bet on NBA, PBA, FIBA and other leagues with GCash. Get exclusive bonuses and competitive odds.">
+  
+  <style>
+    /* Base styles */
+    :root {
+      --color-black: #000000;
+      --color-white: #ffffff;
+      --color-gray-800: #1f2937;
+      --color-gray-900: #111827;
+      --color-gray-950: #0a0f1a;
+      --color-gray-300: #d1d5db;
+      --color-gray-400: #9ca3af;
+      --color-amber-500: #f59e0b;
+      --color-blue-400: #60a5fa;
+      --color-green-500: #10b981;
+      --color-orange-500: #f97316;
+      --color-orange-600: #ea580c;
+      --color-red-600: #dc2626;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      background-color: var(--color-black);
+      color: var(--color-white);
+      line-height: 1.5;
+      position: relative;
+      overflow-x: hidden; /* Prevent horizontal scrolling */
+      padding: 20px;
+    }
+    
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+    
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+    
+    /* Layout */
+    .container {
+      width: 100%;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+    
+    .back-button {
+      display: inline-flex;
+      align-items: center;
+      background-color: var(--color-gray-900);
+      color: var(--color-white);
+      padding: 0.5rem 1rem;
+      border-radius: 0.25rem;
+      margin-bottom: 1.5rem;
+      transition: background-color 0.2s, transform 0.2s;
+      border: 1px solid var(--color-gray-800);
+    }
+    
+    .back-button:hover {
+      background-color: var(--color-gray-800);
+      transform: translateY(-2px);
+    }
+    
+    .back-button svg {
+      margin-right: 0.5rem;
+    }
+    
+    .page-title {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: var(--color-white);
+    }
+    
+    .subtitle {
+      font-size: 1.25rem;
+      color: var(--color-gray-300);
+      margin-bottom: 2rem;
+    }
+    
+    .section {
+      margin-bottom: 2.5rem;
+      background-color: var(--color-gray-950);
+      border-radius: 0.5rem;
+      padding: 1.5rem;
+      border: 1px solid var(--color-gray-800);
+    }
+    
+    .section-title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: var(--color-amber-500);
+    }
+    
+    .text-content {
+      color: var(--color-gray-300);
+      margin-bottom: 1rem;
+    }
+    
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 1rem;
+    }
+    
+    @media (min-width: 640px) {
+      .grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    
+    @media (min-width: 768px) {
+      .grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    
+    .card {
+      background-color: var(--color-gray-900);
+      border-radius: 0.5rem;
+      padding: 1.25rem;
+      border: 1px solid var(--color-gray-800);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+    }
+    
+    .card-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+    
+    .card-content {
+      color: var(--color-gray-300);
+      font-size: 0.875rem;
+    }
+    
+    .league-logo {
+      width: 80px;
+      height: 80px;
+      object-fit: contain;
+      margin: 0 auto 1rem;
+    }
+    
+    .betting-site {
+      display: flex;
+      align-items: center;
+      background-color: var(--color-gray-900);
+      border-radius: 0.5rem;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      border: 1px solid var(--color-gray-800);
+      transition: transform 0.3s;
+    }
+    
+    .betting-site:hover {
+      transform: translateY(-3px);
+    }
+    
+    .site-logo {
+      width: 100px;
+      height: 100px;
+      object-fit: contain;
+      margin-right: 1rem;
+      border-radius: 0.25rem;
+      border: 1px solid var(--color-gray-800);
+    }
+    
+    .site-details {
+      flex: 1;
+    }
+    
+    .site-name {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+    }
+    
+    .site-bonus {
+      color: var(--color-amber-500);
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+    
+    .site-features {
+      list-style: none;
+      margin-bottom: 0.5rem;
+    }
+    
+    .site-features li {
+      display: flex;
+      align-items: center;
+      font-size: 0.875rem;
+      margin-bottom: 0.25rem;
+      color: var(--color-gray-300);
+    }
+    
+    .site-features li::before {
+      content: "✓";
+      color: var(--color-green-500);
+      margin-right: 0.5rem;
+    }
+    
+    .bet-button {
+      display: inline-block;
+      background-color: var(--color-orange-500);
+      color: var(--color-white);
+      padding: 0.5rem 1rem;
+      border-radius: 0.25rem;
+      font-weight: 600;
+      transition: background-color 0.2s, transform 0.2s;
+    }
+    
+    .bet-button:hover {
+      background-color: var(--color-orange-600);
+      transform: translateY(-2px);
+    }
+    
+    .bet-types {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+    
+    @media (min-width: 768px) {
+      .bet-types {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    
+    .bet-type {
+      background-color: var(--color-gray-900);
+      border-radius: 0.5rem;
+      padding: 1rem;
+      border: 1px solid var(--color-gray-800);
+    }
+    
+    .bet-type-title {
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: var(--color-amber-500);
+    }
+    
+    .bet-type-desc {
+      font-size: 0.875rem;
+      color: var(--color-gray-300);
+    }
+    
+    .cta-box {
+      background: linear-gradient(to right, var(--color-gray-900), var(--color-gray-950));
+      border-radius: 0.5rem;
+      padding: 1.5rem;
+      text-align: center;
+      margin-top: 2rem;
+      border: 1px solid var(--color-gray-800);
+    }
+    
+    .cta-title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+    
+    .cta-text {
+      color: var(--color-gray-300);
+      margin-bottom: 1.5rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .cta-button {
+      display: inline-block;
+      background-color: var(--color-orange-500);
+      color: var(--color-white);
+      padding: 0.75rem 1.5rem;
+      border-radius: 0.25rem;
+      font-weight: 600;
+      transition: background-color 0.2s, transform 0.2s;
+    }
+    
+    .cta-button:hover {
+      background-color: var(--color-orange-600);
+      transform: translateY(-2px);
+    }
+    
+    @media (max-width: 640px) {
+      .page-title {
+        font-size: 1.5rem;
+      }
+      
+      .subtitle {
+        font-size: 1rem;
+      }
+      
+      .section-title {
+        font-size: 1.25rem;
+      }
+      
+      .betting-site {
+        flex-direction: column;
+        text-align: center;
+      }
+      
+      .site-logo {
+        margin-right: 0;
+        margin-bottom: 1rem;
+      }
+      
+      .bet-types {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Back Button -->
+    <a href="index.html" class="back-button">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M19 12H5"></path>
+        <path d="M12 19l-7-7 7-7"></path>
+      </svg>
+      Home
+    </a>
+    
+    <!-- Page Title -->
+    <h1 class="page-title">Basketball Betting in the Philippines</h1>
+    <p class="subtitle">Find the best basketball betting sites, odds, and bonuses for Filipino players</p>
+    
+    <!-- Introduction Section -->
+    <div class="section">
+      <h2 class="section-title">Basketball Betting Guide for Filipino Players</h2>
+      <p class="text-content">
+        Basketball is one of the most popular sports in the Philippines, with millions of passionate fans following both local and international leagues. Online betting on basketball games has become increasingly popular among Filipino players, offering exciting opportunities to win while enjoying the sport they love.
+      </p>
+      <p class="text-content">
+        Our comprehensive guide covers everything you need to know about basketball betting in the Philippines, including the best betting sites, popular leagues, types of bets, and strategies to improve your chances of winning.
+      </p>
+    </div>
+    
+    <!-- Popular Basketball Leagues -->
+    <div class="section">
+      <h2 class="section-title">Popular Basketball Leagues for Betting</h2>
+      <p class="text-content">
+        Filipino basketball fans can bet on a wide range of leagues and tournaments from around the world. Here are the most popular basketball leagues for betting in the Philippines:
+      </p>
+      
+      <div class="grid">
+        <!-- NBA -->
+        <div class="card">
+          <img src="https://placeholder.svg?height=80&width=80" alt="NBA Logo" class="league-logo">
+          <h3 class="card-title">NBA</h3>
+          <p class="card-content">
+            The National Basketball Association is the most popular basketball league globally, featuring the world's best players and teams. Filipino bettors can wager on regular season games, playoffs, and the NBA Finals.
+          </p>
+        </div>
+        
+        <!-- PBA -->
+        <div class="card">
+          <img src="https://placeholder.svg?height=80&width=80" alt="PBA Logo" class="league-logo">
+          <h3 class="card-title">PBA</h3>
+          <p class="card-content">
+            The Philippine Basketball Association is the top professional basketball league in the Philippines. Betting on PBA games is extremely popular among Filipino players who follow local teams and players.
+          </p>
+        </div>
+        
+        <!-- FIBA -->
+        <div class="card">
+          <img src="https://placeholder.svg?height=80&width=80" alt="FIBA Logo" class="league-logo">
+          <h3 class="card-title">FIBA Tournaments</h3>
+          <p class="card-content">
+            International basketball competitions organized by FIBA, including the World Cup and Asia Cup. Filipino bettors can support Gilas Pilipinas in international tournaments.
+          </p>
+        </div>
+        
+        <!-- EuroLeague -->
+        <div class="card">
+          <img src="https://placeholder.svg?height=80&width=80" alt="EuroLeague Logo" class="league-logo">
+          <h3 class="card-title">EuroLeague</h3>
+          <p class="card-content">
+            Europe's premier professional basketball club competition featuring top teams from across the continent. The high level of play makes it popular for betting.
+          </p>
+        </div>
+        
+        <!-- NCAA (Philippines) -->
+        <div class="card">
+          <img src="https://placeholder.svg?height=80&width=80" alt="NCAA Philippines Logo" class="league-logo">
+          <h3 class="card-title">NCAA Philippines</h3>
+          <p class="card-content">
+            The National Collegiate Athletic Association of the Philippines features exciting college basketball games that attract significant betting interest.
+          </p>
+        </div>
+        
+        <!-- UAAP -->
+        <div class="card">
+          <img src="https://placeholder.svg?height=80&width=80" alt="UAAP Logo" class="league-logo">
+          <h3 class="card-title">UAAP</h3>
+          <p class="card-content">
+            The University Athletic Association of the Philippines basketball tournament is hugely popular, with intense rivalries and passionate fan bases making it attractive for betting.
+          </p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Top Basketball Betting Sites -->
+    <div class="section">
+      <h2 class="section-title">Top Basketball Betting Sites in the Philippines</h2>
+      <p class="text-content">
+        These online betting sites offer the best basketball betting experience for Filipino players, with competitive odds, generous bonuses, and a wide range of betting markets:
+      </p>
+      
+      <!-- Betting Site 1 -->
+      <div class="betting-site">
+        <img src="Game-icon/SmGame.jpg" alt="Smgame Logo" class="site-logo">
+        <div class="site-details">
+          <h3 class="site-name">Smgame</h3>
+          <p class="site-bonus">Welcome Bonus: 100% up to ₱8,888</p>
+          <ul class="site-features">
+            <li>Extensive NBA and PBA coverage</li>
+            <li>Live betting with competitive odds</li>
+            <li>GCash and PayMaya accepted</li>
+            <li>Mobile-friendly platform</li>
+          </ul>
+          <a href="https://www.smgame777.cc?f=426081" class="bet-button" rel="noreferrer nofollow noopener" target="_blank">Bet Now</a>
+        </div>
+      </div>
+      
+      <!-- Betting Site 2 -->
+      <div class="betting-site">
+        <img src="Game-icon/mcw-casino.jpg" alt="MCW Casino Logo" class="site-logo">
+        <div class="site-details">
+          <h3 class="site-name">MCW Casino</h3>
+          <p class="site-bonus">Sports Welcome Bonus: 100% up to ₱38,888</p>
+          <ul class="site-features">
+            <li>Comprehensive basketball betting markets</li>
+            <li>Live streaming of selected games</li>
+            <li>Fast withdrawals via GCash</li>
+            <li>Regular basketball promotions</li>
+          </ul>
+          <a href="https://facai88.club/af/GHzNR514/join" class="bet-button" rel="noreferrer nofollow noopener" target="_blank">Bet Now</a>
+        </div>
+      </div>
+      
+      <!-- Betting Site 3 -->
+      <div class="betting-site">
+        <img src="Game-icon/22Fun.webp" alt="22Fun Logo" class="site-logo">
+        <div class="site-details">
+          <h3 class="site-name">22Fun</h3>
+          <p class="site-bonus">Sports Bonus: 100% up to ₱25,000</p>
+          <ul class="site-features">
+            <li>PAGCOR licensed sportsbook</li>
+            <li>Excellent odds on PBA games</li>
+            <li>Filipino customer support</li>
+            <li>Secure payment methods</li>
+          </ul>
+          <a href="https://www.22funph1.com/en-ph?aff=e2994672bd" class="bet-button" rel="noreferrer nofollow noopener" target="_blank">Bet Now</a>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Types of Basketball Bets -->
+    <div class="section">
+      <h2 class="section-title">Popular Basketball Betting Types</h2>
+      <p class="text-content">
+        Basketball offers a wide variety of betting options. Here are the most popular types of basketball bets available to Filipino players:
+      </p>
+      
+      <div class="bet-types">
+        <!-- Moneyline -->
+        <div class="bet-type">
+          <h3 class="bet-type-title">Moneyline</h3>
+          <p class="bet-type-desc">
+            The simplest form of basketball betting where you pick which team will win the game outright. No point spreads involved.
+          </p>
+        </div>
+        
+        <!-- Point Spread -->
+        <div class="bet-type">
+          <h3 class="bet-type-title">Point Spread</h3>
+          <p class="bet-type-desc">
+            Betting on the margin of victory. The favorite must win by more than the spread, while the underdog can lose by less than the spread or win outright.
+          </p>
+        </div>
+        
+        <!-- Over/Under (Totals) -->
+        <div class="bet-type">
+          <h3 class="bet-type-title">Over/Under (Totals)</h3>
+          <p class="bet-type-desc">
+            Betting on whether the combined score of both teams will be over or under a number set by the sportsbook.
+          </p>
+        </div>
+        
+        <!-- Player Props -->
+        <div class="bet-type">
+          <h3 class="bet-type-title">Player Props</h3>
+          <p class="bet-type-desc">
+            Bets on individual player performances, such as points scored, rebounds, assists, or three-pointers made.
+          </p>
+        </div>
+        
+        <!-- Quarter/Half Bets -->
+        <div class="bet-type">
+          <h3 class="bet-type-title">Quarter/Half Bets</h3>
+          <p class="bet-type-desc">
+            Betting on outcomes for specific quarters or halves of the game rather than the full game.
+          </p>
+        </div>
+        
+        <!-- Parlays -->
+        <div class="bet-type">
+          <h3 class="bet-type-title">Parlays</h3>
+          <p class="bet-type-desc">
+            Combining multiple bets into one wager for higher potential payouts. All selections must win for the parlay to pay out.
+          </p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Basketball Betting Tips -->
+    <div class="section">
+      <h2 class="section-title">Basketball Betting Tips for Filipino Players</h2>
+      <p class="text-content">
+        Improve your chances of winning with these basketball betting strategies:
+      </p>
+      
+      <ul class="text-content" style="list-style-position: inside; padding-left: 1rem;">
+        <li><strong>Research team form and injuries</strong> - Always check the latest team news, player injuries, and recent performance before placing your bets.</li>
+        <li><strong>Understand home court advantage</strong> - Home teams in basketball often have a significant advantage, especially in the PBA and collegiate leagues.</li>
+        <li><strong>Consider pace and style of play</strong> - Teams with contrasting styles can create betting opportunities, particularly for over/under bets.</li>
+        <li><strong>Shop for the best odds</strong> - Compare odds across different sportsbooks to maximize your potential returns.</li>
+        <li><strong>Manage your bankroll</strong> - Set a budget for your basketball betting and stick to it. Never chase losses.</li>
+        <li><strong>Focus on leagues you know</strong> - Specialize in specific leagues like the PBA or NBA rather than betting on unfamiliar competitions.</li>
+        <li><strong>Consider live betting</strong> - In-game betting can offer value when you spot momentum shifts or matchup advantages.</li>
+      </ul>
+    </div>
+    
+    <!-- CTA Box -->
+    <div class="cta-box">
+      <h2 class="cta-title">Ready to Start Betting on Basketball?</h2>
+      <p class="cta-text">
+        Join thousands of Filipino basketball fans who are enjoying the excitement of online basketball betting. Sign up today to claim your welcome bonus and start betting on NBA, PBA, and other basketball leagues.
+      </p>
+      <a href="https://www.smgame777.cc?f=426081" class="cta-button" rel="noreferrer nofollow noopener" target="_blank">
+        Get Started Now
+      </a>
+    </div>
+  </div>
+</body>
+</html>
+

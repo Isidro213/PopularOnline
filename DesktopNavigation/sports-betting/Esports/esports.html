@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html lang="en-PH">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Esports Betting Philippines | Best Esports Betting Sites</title>
+  <meta name="description" content="Find the best esports betting sites in the Philippines. Bet on Mobile Legends, DOTA 2, League of Legends and more with GCash. Get exclusive bonuses and competitive odds.">
+  
+  <style>
+    /* Base styles */
+    :root {
+      --color-black: #000000;
+      --color-white: #ffffff;
+      --color-gray-800: #1f2937;
+      --color-gray-900: #111827;
+      --color-gray-950: #0a0f1a;
+      --color-gray-300: #d1d5db;
+      --color-gray-400: #9ca3af;
+      --color-amber-500: #f59e0b;
+      --color-blue-400: #60a5fa;
+      --color-green-500: #10b981;
+      --color-orange-500: #f97316;
+      --color-orange-600: #ea580c;
+      --color-red-600: #dc2626;
+      --color-purple-500: #8b5cf6;
+      --color-purple-600: #7c3aed;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      background-color: var(--color-black);
+      color: var(--color-white);
+      line-height: 1.5;
+      position: relative;
+      overflow-x: hidden; /* Prevent horizontal scrolling */
+      padding: 20px;
+    }
+    
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+    
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+    
+    /* Layout */
+    .container {
+      width: 100%;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+    
+    .back-button {
+      display: inline-flex;
+      align-items: center;
+      background-color: var(--color-gray-900);
+      color: var(--color-white);
+      padding: 0.5rem 1rem;
+      border-radius: 0.25rem;
+      margin-bottom: 1.5rem;
+      transition: background-color 0.2s, transform 0.2s;
+      border: 1px solid var(--color-gray-800);
+    }
+    
+    .back-button:hover {
+      background-color: var(--color-gray-800);
+      transform: translateY(-2px);
+    }
+    
+    .back-button svg {
+      margin-right: 0.5rem;
+    }
+    
+    .page-title {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: var(--color-white);
+    }
+    
+    .subtitle {
+      font-size: 1.25rem;
+      color: var(--color-gray-300);
+      margin-bottom: 2rem;
+    }
+    
+    .section {
+      margin-bottom: 2.5rem;
+      background-color: var(--color-gray-950);
+      border-radius: 0.5rem;
+      padding: 1.5rem;
+      border: 1px solid var(--color-gray-800);
+    }
+    
+    .section-title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: var(--color-amber-500);
+    }
+    
+    .text-content {
+      color: var(--color-gray-300);
+      margin-bottom: 1rem;
+    }
+    
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 1rem;
+    }
+    
+    @media (min-width: 640px) {
+      .grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    
+    @media (min-width: 768px) {
+      .grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    
+    .card {
+      background-color: var(--color-gray-900);
+      border-radius: 0.5rem;
+      padding: 1.25rem;
+      border: 1px solid var(--color-gray-800);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+    }
+    
+    .card-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+    
+    .card-content {
+      color: var(--color-gray-300);
+      font-size: 0.875rem;
+    }
+    
+    .game-logo {
+      width: 80px;
+      height: 80px;
+      object-fit: contain;
+      margin: 0 auto 1rem;
+      border-radius: 0.5rem;
+    }
+    
+    .betting-site {
+      display: flex;
+      align-items: center;
+      background-color: var(--color-gray-900);
+      border-radius: 0.5rem;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      border: 1px solid var(--color-gray-800);
+      transition: transform 0.3s;
+    }
+    
+    .betting-site:hover {
+      transform: translateY(-3px);
+    }
+    
+    .site-logo {
+      width: 100px;
+      height: 100px;
+      object-fit: contain;
+      margin-right: 1rem;
+      border-radius: 0.25rem;
+      border: 1px solid var(--color-gray-800);
+    }
+    
+    .site-details {
+      flex: 1;
+    }
+    
+    .site-name {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+    }
+    
+    .site-bonus {
+      color: var(--color-amber-500);
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+    
+    .site-features {
+      list-style: none;
+      margin-bottom: 0.5rem;
+    }
+    
+    .site-features li {
+      display: flex;
+      align-items: center;
+      font-size: 0.875rem;
+      margin-bottom: 0.25rem;
+      color: var(--color-gray-300);
+    }
+    
+    .site-features li::before {
+      content: "✓";
+      color: var(--color-green-500);
+      margin-right: 0.5rem;
+    }
+    
+    .bet-button {
+      display: inline-block;
+      background-color: var(--color-purple-500);
+      color: var(--color-white);
+      padding: 0.5rem 1rem;
+      border-radius: 0.25rem;
+      font-weight: 600;
+      transition: background-color 0.2s, transform 0.2s;
+    }
+    
+    .bet-button:hover {
+      background-color: var(--color-purple-600);
+      transform: translateY(-2px);
+    }
+    
+    .bet-types {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+    
+    @media (min-width: 768px) {
+      .bet-types {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    
+    .bet-type {
+      background-color: var(--color-gray-900);
+      border-radius: 0.5rem;
+      padding: 1rem;
+      border: 1px solid var(--color-gray-800);
+    }
+    
+    .bet-type-title {
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: var(--color-amber-500);
+    }
+    
+    .bet-type-desc {
+      font-size: 0.875rem;
+      color: var(--color-gray-300);
+    }
+    
+    .cta-box {
+      background: linear-gradient(to right, var(--color-gray-900), var(--color-gray-950));
+      border-radius: 0.5rem;
+      padding: 1.5rem;
+      text-align: center;
+      margin-top: 2rem;
+      border: 1px solid var(--color-gray-800);
+    }
+    
+    .cta-title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+    
+    .cta-text {
+      color: var(--color-gray-300);
+      margin-bottom: 1.5rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .cta-button {
+      display: inline-block;
+      background-color: var(--color-purple-500);
+      color: var(--color-white);
+      padding: 0.75rem 1.5rem;
+      border-radius: 0.25rem;
+      font-weight: 600;
+      transition: background-color 0.2s, transform 0.2s;
+    }
+    
+    .cta-button:hover {
+      background-color: var(--color-purple-600);
+      transform: translateY(-2px);
+    }
+    
+    .image-container {
+      margin: 1.5rem 0;
+      border-radius: 0.5rem;
+      overflow: hidden;
+    }
+    
+    .image-container img {
+      width: 100%;
+      height: auto;
+      border-radius: 0.5rem;
+    }
+    
+    .steps-container {
+      margin-top: 1.5rem;
+    }
+    
+    .step {
+      display: flex;
+      margin-bottom: 1rem;
+      background-color: var(--color-gray-900);
+      border-radius: 0.5rem;
+      padding: 1rem;
+      border: 1px solid var(--color-gray-800);
+    }
+    
+    .step-number {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 30px;
+      height: 30px;
+      background-color: var(--color-purple-500);
+      color: var(--color-white);
+      border-radius: 50%;
+      margin-right: 1rem;
+      font-weight: bold;
+      flex-shrink: 0;
+    }
+    
+    .step-content {
+      flex: 1;
+    }
+    
+    .step-title {
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+    }
+    
+    .step-desc {
+      font-size: 0.875rem;
+      color: var(--color-gray-300);
+    }
+    
+    .two-columns {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    
+    @media (min-width: 768px) {
+      .two-columns {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    
+    .tournament-card {
+      display: flex;
+      flex-direction: column;
+      background-color: var(--color-gray-900);
+      border-radius: 0.5rem;
+      padding: 1.25rem;
+      border: 1px solid var(--color-gray-800);
+      transition: transform 0.3s, box-shadow 0.3s;
+      height: 100%;
+    }
+    
+    .tournament-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+    }
+    
+    .tournament-logo {
+      width: 100px;
+      height: 100px;
+      object-fit: contain;
+      margin: 0 auto 1rem;
+    }
+    
+    .tournament-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      text-align: center;
+    }
+    
+    .tournament-details {
+      font-size: 0.875rem;
+      color: var(--color-gray-300);
+      margin-bottom: 0.5rem;
+    }
+    
+    .tournament-prize {
+      color: var(--color-amber-500);
+      font-weight: 600;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    
+    @media (max-width: 640px) {
+      .page-title {
+        font-size: 1.5rem;
+      }
+      
+      .subtitle {
+        font-size: 1rem;
+      }
+      
+      .section-title {
+        font-size: 1.25rem;
+      }
+      
+      .betting-site {
+        flex-direction: column;
+        text-align: center;
+      }
+      
+      .site-logo {
+        margin-right: 0;
+        margin-bottom: 1rem;
+      }
+      
+      .bet-types {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Back Button -->
+    <a href="index.html" class="back-button">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M19 12H5"></path>
+        <path d="M12 19l-7-7 7-7"></path>
+      </svg>
+      Home
+    </a>
+    
+    <!-- Page Title -->
+    <h1 class="page-title">Esports Betting in the Philippines</h1>
+    <p class="subtitle">Your guide to the best esports betting sites, games, and strategies for Filipino players</p>
+    
+    <!-- Introduction Section -->
+    <div class="section">
+      <h2 class="section-title">What is Esports Betting?</h2>
+      <p class="text-content">
+        Esports betting allows you to place wagers on competitive video game tournaments and matches. The Philippines has one of the most active esports communities in Southeast Asia, with millions of passionate fans following games like Mobile Legends, DOTA 2, League of Legends, and more.
+      </p>
+      <p class="text-content">
+        With the rise of professional esports tournaments offering multi-million peso prize pools, betting on these events has become increasingly popular among Filipino players. Online betting sites now offer extensive coverage of esports competitions, with various betting markets and competitive odds.
+      </p>
+      <div class="image-container">
+        <img src="https://placeholder.svg?height=300&width=700" alt="Esports Tournament Arena" loading="lazy">
+      </div>
+      <p class="text-content">
+        Our comprehensive guide covers everything you need to know about esports betting in the Philippines, including the best betting sites, popular games, betting markets, and strategies to improve your chances of winning.
+      </p>
+    </div>
+    
+    <!-- Popular Esports Games -->
+    <div class="section">
+      <h2 class="section-title">Popular Esports Games for Betting in the Philippines</h2>
+      <p class="text-content">
+        Filipino players can bet on a wide range of esports games. Here are the most popular titles for esports betting in the Philippines:
+      </p>
+      
+      <div class="grid">
+        <!-- Mobile Legends -->
+        <div class="card">
+          <img src="https://placeholder.svg?height=80&width=80" alt="Mobile Legends Logo" class="game-logo">
+          <h3 class="card-title">Mobile Legends: Bang Bang</h3>
+          <p class="card-content">
+            The most popular mobile MOBA game in the Philippines with a massive player base. Major tournaments include MPL Philippines and M-series World Championships.
+          </p>
+        </div>
+        
+        <!-- DOTA 2 -->
+        <div class="card">
+          <img src="https://placeholder.svg?height=80&width=80" alt="DOTA 2 Logo" class="game-logo">
+          <h3 class="card-title">DOTA 2</h3>
+          <p class="card-content">
+            A highly competitive MOBA with some of the largest prize pools in esports. The International tournament offers millions of dollars in prizes.
+          </p>
+        </div>
+        
+        <!-- League of Legends -->
+        <div class="card">
+          <img src="https://placeholder.svg?height=80&width=80" alt="League of Legends Logo" class="game-logo">
+          <h3 class="card-title">League of Legends</h3>
+          <p class="card-content">
+            One of the world's most popular MOBAs with a structured competitive scene. Major events include the World Championship and regional leagues.
+          </p>
+        </div>
+        
+        <!-- Valorant -->
+        <div class="card">
+          <img src="https://placeholder.svg?height=80&width=80" alt="Valorant Logo" class="game-logo">
+          <h3 class="card-title">Valorant</h3>
+          <p class="card-content">
+            A tactical first-person shooter with a growing competitive scene in the Philippines. Valorant Champions Tour features teams from around the world.
+          </p>
+        </div>
+        
+        <!-- PUBG Mobile -->
+        <div class="card">
+          <img src="https://placeholder.svg?height=80&width=80" alt="PUBG Mobile Logo" class="game-logo">
+          <h3 class="card-title">PUBG Mobile</h3>
+          <p class="card-content">
+            A popular battle royale game with regular tournaments in the Philippines. PUBG Mobile Pro League (PMPL) features top Filipino teams.
+          </p>
+        </div>
+        
+        <!-- Call of Duty Mobile -->
+        <div class="card">
+          <img src="https://placeholder.svg?height=80&width=80" alt="Call of Duty Mobile Logo" class="game-logo">
+          <h3 class="card-title">Call of Duty Mobile</h3>
+          <p class="card-content">
+            A mobile first-person shooter with a competitive scene that includes the Call of Duty Mobile World Championship.
+          </p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Major Esports Tournaments -->
+    <div class="section">
+      <h2 class="section-title">Major Esports Tournaments to Bet On</h2>
+      <p class="text-content">
+        These prestigious tournaments attract the most betting action from Filipino esports fans:
+      </p>
+      
+      <div class="grid">
+        <!-- MPL Philippines -->
+        <div class="tournament-card">
+          <img src="https://placeholder.svg?height=100&width=100" alt="MPL Philippines Logo" class="tournament-logo">
+          <h3 class="tournament-title">MPL Philippines</h3>
+          <p class="tournament-prize">Prize Pool: ₱4,000,000+</p>
+          <p class="tournament-details">
+            The premier Mobile Legends professional league in the Philippines featuring the country's top teams competing over a regular season and playoffs.
+          </p>
+        </div>
+        
+        <!-- The International -->
+        <div class="tournament-card">
+          <img src="https://placeholder.svg?height=100&width=100" alt="The International Logo" class="tournament-logo">
+          <h3 class="tournament-title">The International</h3>
+          <p class="tournament-prize">Prize Pool: $40,000,000+</p>
+          <p class="tournament-details">
+            DOTA 2's premier annual tournament with the largest prize pool in esports. Filipino teams occasionally qualify for this prestigious event.
+          </p>
+        </div>
+        
+        <!-- M-Series World Championship -->
+        <div class="tournament-card">
+          <img src="https://placeholder.svg?height=100&width=100" alt="M-Series World Championship Logo" class="tournament-logo">
+          <h3 class="tournament-title">M-Series World Championship</h3>
+          <p class="tournament-prize">Prize Pool: $800,000+</p>
+          <p class="tournament-details">
+            The annual world championship for Mobile Legends where the best teams from each region compete. Filipino teams have historically performed well.
+          </p>
+        </div>
+        
+        <!-- Valorant Champions Tour -->
+        <div class="tournament-card">
+          <img src="https://placeholder.svg?height=100&width=100" alt="Valorant Champions Tour Logo" class="tournament-logo">
+          <h3 class="tournament-title">Valorant Champions Tour</h3>
+          <p class="tournament-prize">Prize Pool: $1,000,000+</p>
+          <p class="tournament-details">
+            The official global competition for Valorant featuring teams from the Philippines and other regions competing in multiple stages.
+          </p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Top Esports Betting Sites -->
+    <div class="section">
+      <h2 class="section-title">Top Esports Betting Sites in the Philippines</h2>
+      <p class="text-content">
+        These online betting sites offer the best esports betting experience for Filipino players, with extensive coverage, competitive odds, and secure payment options:
+      </p>
+      
+      <!-- Betting Site 1 -->
+      <div class="betting-site">
+        <img src="Game-icon/SmGame.jpg" alt="Smgame Logo" class="site-logo">
+        <div class="site-details">
+          <h3 class="site-name">Smgame</h3>
+          <p class="site-bonus">Welcome Bonus: 100% up to ₱8,888</p>
+          <ul class="site-features">
+            <li>Extensive Mobile Legends and DOTA 2 coverage</li>
+            <li>Live betting with competitive odds</li>
+            <li>GCash and PayMaya accepted</li>
+            <li>Mobile-friendly platform</li>
+          </ul>
+          <a href="https://www.smgame777.cc?f=426081" class="bet-button" rel="noreferrer nofollow noopener" target="_blank">Bet Now</a>
+        </div>
+      </div>
+      
+      <!-- Betting Site 2 -->
+      <div class="betting-site">
+        <img src="Game-icon/mcw-casino.jpg" alt="MCW Casino Logo" class="site-logo">
+        <div class="site-details">
+          <h3 class="site-name">MCW Casino</h3>
+          <p class="site-bonus">Esports Bonus: 100% up to ₱38,888</p>
+          <ul class="site-features">
+            <li>Live streaming of major esports tournaments</li>
+            <li>Comprehensive betting markets</li>
+            <li>Fast withdrawals via GCash</li>
+            <li>Regular esports promotions</li>
+          </ul>
+          <a href="https://facai88.club/af/GHzNR514/join" class="bet-button" rel="noreferrer nofollow noopener" target="_blank">Bet Now</a>
+        </div>
+      </div>
+      
+      <!-- Betting Site 3 -->
+      <div class="betting-site">
+        <img src="Game-icon/22Fun.webp" alt="22Fun Logo" class="site-logo">
+        <div class="site-details">
+          <h3 class="site-name">22Fun</h3>
+          <p class="site-bonus">Esports Bonus: 100% up to ₱25,000</p>
+          <ul class="site-features">
+            <li>PAGCOR licensed platform</li>
+            <li>Excellent Mobile Legends betting options</li>
+            <li>Filipino customer support</li>
+            <li>Secure payment methods</li>
+          </ul>
+          <a href="https://www.22funph1.com/en-ph?aff=e2994672bd" class="bet-button" rel="noreferrer nofollow noopener" target="_blank">Bet Now</a>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Types of Esports Bets -->
+    <div class="section">
+      <h2 class="section-title">Popular Esports Betting Markets</h2>
+      <p class="text-content">
+        Esports offers a wide variety of betting options. Here are the most popular types of esports bets available to Filipino players:
+      </p>
+      
+      <div class="bet-types">
+        <!-- Match Winner -->
+        <div class="bet-type">
+          <h3 class="bet-type-title">Match Winner</h3>
+          <p class="bet-type-desc">
+            The simplest form of esports betting where you pick which team will win the match. Also known as moneyline or 1X2 betting.
+          </p>
+        </div>
+        
+        <!-- Handicap -->
+        <div class="bet-type">
+          <h3 class="bet-type-title">Handicap</h3>
+          <p class="bet-type-desc">
+            One team is given a virtual advantage or disadvantage to balance the odds. Popular for matches with clear favorites.
+          </p>
+        </div>
+        
+        <!-- Total Maps/Games -->
+        <div class="bet-type">
+          <h3 class="bet-type-title">Total Maps/Games</h3>
+          <p class="bet-type-desc">
+            Betting on whether the total number of maps or games played in a series will be over or under a specified number.
+          </p>
+        </div>
+        
+        <!-- First Blood -->
+        <div class="bet-type">
+          <h3 class="bet-type-title">First Blood</h3>
+          <p class="bet-type-desc">
+            Betting on which team will get the first kill in a match. Popular in MOBA games like Mobile Legends and DOTA 2.
+          </p>
+        </div>
+        
+        <!-- First to X Kills -->
+        <div class="bet-type">
+          <h3 class="bet-type-title">First to X Kills</h3>
+          <p class="bet-type-desc">
+            Betting on which team will be the first to reach a certain number of kills (e.g., first to 10 kills).
+          </p>
+        </div>
+        
+        <!-- Tournament Winner -->
+        <div class="bet-type">
+          <h3 class="bet-type-title">Tournament Winner</h3>
+          <p class="bet-type-desc">
+            A long-term bet on which team will win an entire tournament. These bets typically offer higher odds.
+          </p>
+        </div>
+        
+        <!-- Map Winner -->
+        <div class="bet-type">
+          <h3 class="bet-type-title">Map Winner</h3>
+          <p class="bet-type-desc">
+            Betting on the winner of a specific map in a multi-map series, rather than the overall match winner.
+          </p>
+        </div>
+        
+        <!-- Prop Bets -->
+        <div class="bet-type">
+          <h3 class="bet-type-title">Prop Bets</h3>
+          <p class="bet-type-desc">
+            Special bets on specific events within a match, such as which team will destroy the first tower or take the first objective.
+          </p>
+        </div>
+        
+        <!-- Live Betting -->
+        <div class="bet-type">
+          <h3 class="bet-type-title">Live Betting</h3>
+          <p class="bet-type-desc">
+            Placing bets during a match as the action unfolds, with odds that change in real-time based on the current situation.
+          </p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- How to Bet on Esports -->
+    <div class="section">
+      <h2 class="section-title">How to Bet on Esports in the Philippines</h2>
+      <p class="text-content">
+        Getting started with esports betting is easy. Follow these simple steps:
+      </p>
+      
+      <div class="steps-container">
+        <!-- Step 1 -->
+        <div class="step">
+          <div class="step-number">1</div>
+          <div class="step-content">
+            <h3 class="step-title">Choose an Esports Betting Site</h3>
+            <p class="step-desc">
+              Select one of our recommended esports betting platforms that offers good coverage of your favorite games, competitive odds, and secure payment methods.
+            </p>
+          </div>
+        </div>
+        
+        <!-- Step 2 -->
+        <div class="step">
+          <div class="step-number">2</div>
+          <div class="step-content">
+            <h3 class="step-title">Create an Account</h3>
+            <p class="step-desc">
+              Register by providing your basic information. The process typically takes less than 5 minutes to complete.
+            </p>
+          </div>
+        </div>
+        
+        <!-- Step 3 -->
+        <div class="step">
+          <div class="step-number">3</div>
+          <div class="step-content">
+            <h3 class="step-title">Deposit Funds</h3>
+            <p class="step-desc">
+              Add money to your account using GCash, PayMaya, or other available payment methods. Most sites have a minimum deposit of ₱100-₱500.
+            </p>
+          </div>
+        </div>
+        
+        <!-- Step 4 -->
+        <div class="step">
+          <div class="step-number">4</div>
+          <div class="step-content">
+            <h3 class="step-title">Browse Available Matches</h3>
+            <p class="step-desc">
+              Navigate to the esports section and explore the upcoming and live matches for your favorite games like Mobile Legends, DOTA 2, or Valorant.
+            </p>
+          </div>
+        </div>
+        
+        <!-- Step 5 -->
+        <div class="step">
+          <div class="step-number">5</div>
+          <div class="step-content">
+            <h3 class="step-title">Place Your Bet</h3>
+            <p class="step-desc">
+              Select the match and betting market you want to wager on, enter your stake amount, and confirm your bet.
+            </p>
+          </div>
+        </div>
+        
+        <!-- Step 6 -->
+        <div class="step">
+          <div class="step-number">6</div>
+          <div class="step-content">
+            <h3 class="step-title">Watch the Match</h3>
+            <p class="step-desc">
+              Many betting sites offer live streaming of esports matches. Watch the action unfold and see if your predictions were correct.
+            </p>
+          </div>
+        </div>
+        
+        <!-- Step 7 -->
+        <div class="step">
+          <div class="step-number">7</div>
+          <div class="step-content">
+            <h3 class="step-title">Collect Your Winnings</h3>
+            <p class="step-desc">
+              If your bet wins, your account will be credited automatically. You can then withdraw your winnings or use them for future bets.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Esports Betting Tips -->
+    <div class="section">
+      <h2 class="section-title">Esports Betting Tips for Filipino Players</h2>
+      
+      <div class="two-columns">
+        <div>
+          <p class="text-content">
+            Improve your chances of winning with these esports betting strategies:
+          </p>
+          
+          <ul class="text-content" style="list-style-position: inside; padding-left: 1rem;">
+            <li><strong>Specialize in specific games</strong> - Focus on games you understand well rather than betting on multiple esports titles.</li>
+            <li><strong>Research team form and rosters</strong> - Stay updated on team performance, roster changes, and player statistics.</li>
+            <li><strong>Follow the meta</strong> - Game updates and meta changes can significantly impact team performance, especially in MOBAs.</li>
+            <li><strong>Consider team matchups</strong> - Some teams perform better against certain opponents due to playstyle differences.</li>
+            <li><strong>Watch for value bets</strong> - Look for situations where the odds don't accurately reflect the true probabilities.</li>
+            <li><strong>Manage your bankroll</strong> - Set a budget for your esports betting and never bet more than you can afford to lose.</li>
+            <li><strong>Use live betting strategically</strong> - In-play betting can offer value when you spot momentum shifts or draft advantages.</li>
+            <li><strong>Follow professional analysis</strong> - Listen to expert opinions and analysis from professional esports commentators.</li>
+          </ul>
+        </div>
+        
+        <div class="image-container">
+          <img src="https://placeholder.svg?height=400&width=400" alt="Esports Tournament" loading="lazy">
+        </div>
+      </div>
+    </div>
+    
+    <!-- Mobile Legends Betting -->
+    <div class="section">
+      <h2 class="section-title">Mobile Legends Betting Guide</h2>
+      <p class="text-content">
+        As the most popular mobile esport in the Philippines, Mobile Legends deserves special attention for Filipino bettors:
+      </p>
+      
+      <div class="two-columns">
+        <div>
+          <h3 class="card-title">Key Factors to Consider</h3>
+          <ul class="text-content" style="list-style-position: inside; padding-left: 1rem;">
+            <li><strong>Draft phase</strong> - Hero picks and bans can determine the outcome before the match even begins.</li>
+            <li><strong>Team composition</strong> - Look for balanced teams with clear strategies (e.g., early game aggression vs. late game scaling).</li>
+            <li><strong>Player specialties</strong> - Some players excel with specific heroes or roles.</li>
+            <li><strong>Objective control</strong> - Teams that prioritize objectives like turtles and lords often have higher win rates.</li>
+            <li><strong>Meta understanding</strong> - Teams that quickly adapt to patches and meta shifts have an advantage.</li>
+          </ul>
+        </div>
+        
+        <div>
+          <h3 class="card-title">Popular Betting Markets</h3>
+          <ul class="text-content" style="list-style-position: inside; padding-left: 1rem;">
+            <li><strong>Match winner</strong> - Betting on which team will win the match.</li>
+            <li><strong>First blood</strong> - Betting on which team will get the first kill.</li>
+            <li><strong>First to destroy a turret</strong> - Betting on which team will destroy the first tower.</li>
+            <li><strong>First to kill Lord/Turtle</strong> - Betting on which team will secure the first major objective.</li>
+            <li><strong>Total kills over/under</strong> - Betting on whether the total number of kills will be over or under a specified number.</li>
+            <li><strong>Match duration</strong> - Betting on how long the match will last.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Responsible Gambling -->
+    <div class="section">
+      <h2 class="section-title">Responsible Esports Betting</h2>
+      <p class="text-content">
+        While esports betting can be entertaining, it's important to gamble responsibly:
+      </p>
+      
+      <div class="grid">
+        <!-- Set Limits -->
+        <div class="card">
+          <div class="card-icon">⏱️</div>
+          <h3 class="card-title">Set Time Limits</h3>
+          <p class="card-content">
+            Decide how much time you'll spend betting on esports and stick to it. Don't let it interfere with your daily responsibilities.
+          </p>
+        </div>
+        
+        <!-- Budget -->
+        <div class="card">
+          <div class="card-icon">💵</div>
+          <h3 class="card-title">Establish a Budget</h3>
+          <p class="card-content">
+            Only bet with money you can afford to lose. Set a daily, weekly, or monthly budget and never exceed it.
+          </p>
+        </div>
+        
+        <!-- Don't Chase Losses -->
+        <div class="card">
+          <div class="card-icon">🚫</div>
+          <h3 class="card-title">Don't Chase Losses</h3>
+          <p class="card-content">
+            Accept that losing is part of gambling. Never try to recover losses by increasing your bets or borrowing money.
+          </p>
+        </div>
+        
+        <!-- Take Breaks -->
+        <div class="card">
+          <div class="card-icon">🏖️</div>
+          <h3 class="card-title">Take Regular Breaks</h3>
+          <p class="card-content">
+            Step away from betting regularly to maintain perspective and prevent gambling from becoming a compulsion.
+          </p>
+        </div>
+        
+        <!-- Seek Help -->
+        <div class="card">
+          <div class="card-icon">🆘</div>
+          <h3 class="card-title">Seek Help If Needed</h3>
+          <p class="card-content">
+            If you feel your gambling habits are becoming problematic, don't hesitate to seek professional help or support.
+          </p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- CTA Box -->
+    <div class="cta-box">
+      <h2 class="cta-title">Ready to Bet on Your Favorite Esports?</h2>
+      <p class="cta-text">
+        Join thousands of Filipino esports fans who are enjoying the excitement of online esports betting. Sign up today to claim your welcome bonus and start betting on Mobile Legends, DOTA 2, and other popular games.
+      </p>
+      <a href="https://www.smgame777.cc?f=426081" class="cta-button" rel="noreferrer nofollow noopener" target="_blank">
+        Get Started Now
+      </a>
+    </div>
+  </div>
+</body>
+</html>
+
